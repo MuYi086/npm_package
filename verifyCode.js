@@ -34,22 +34,44 @@ class Obj {
       if (len === 0) return false
       let codeArr = [] // 分大小写
       let dealArr = [] // 不分大小写
-      let colorArr = []
       for (let i = 0; i < len; i++) {
-        // 如果是字母统一处理成大写
         let code = source[this.newInt(source.length)]
         codeArr.push(code)
+        // 如果是字母统一处理成大写
         code = typeof code === 'number' ? code : code.toUpperCase()
         dealArr.push(code)
-        colorArr.push([this.newInt(256), this.newInt(256), this.newInt(256)])
       }
       console.log(codeArr)
-      console.log(colorArr)
+      // canvas画图
+      this.drawImg(codeArr)
       return dealArr
     }
-    // 某范围内随机取整
-    newInt (len) {
-      return Math.floor(Math.random() * len)
+    // 某范围内随机取整:传俩参会限制最大最小值(用来限制字体大小)
+    newInt (len, max) {
+      if (arguments.length === 1) {
+        return Math.floor(Math.random() * len)
+      }
+      if (arguments.length === 2) {
+        return Math.floor(len + Math.random() * (max - len))
+      }
+    }
+    // 用canvas画图
+    drawImg (codeArr) {
+      let canvas = document.getElementById('canvas')
+      canvas.width = codeArr.length * 20
+      canvas.height = 40
+      let content = canvas.getContext('2d')
+      content.fillStyle = '#eee'
+      // 清空画布
+      content.fillRect(0, 0, canvas.width, canvas.height)
+      for (let i = 0; i < codeArr.length; i++) {
+        // 字体颜色
+        content.fillStyle = `rgb(${this.newInt(256)}, ${this.newInt(256)}, ${this.newInt(256)})`
+        // 设置字体
+        content.font = `${this.newInt(15, 25)}px Arial`
+        content.fillText(codeArr[i], i * 20 + 10, this.newInt(20, canvas.height - 10))
+        content.rotate(this.newInt(-30, 30) * Math.PI / 180)
+      }
     }
   }
   let obj = new Obj()
