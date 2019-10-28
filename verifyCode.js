@@ -22,17 +22,11 @@ class Obj {
     this.options.point = point
     let source = []
     // 纯数字
-    if (type === 1) {
-      source = [...this.numArr]
-    }
+    if (type === 1) { source = [...this.numArr] }
     // 纯字母
-    if (type === 2) {
-      source = [...this.letterArrSm, ...this.letterArrBg]
-    }
+    if (type === 2) { source = [...this.letterArrSm, ...this.letterArrBg] }
     // 数字+字母
-    if (type === 3) {
-      source = [...this.numArr, ...this.letterArrSm, ...this.letterArrBg]
-    }
+    if (type === 3) { source = [...this.numArr, ...this.letterArrSm, ...this.letterArrBg] }
     let codeArr = this.doRandom(source)
     console.log(codeArr)
   }
@@ -99,5 +93,6 @@ class Obj {
     }
   }
 }
+// 使用本class需要页面创建一个canvas,且id为canvas
 let obj = new Obj()
 obj.random(3, 5)
