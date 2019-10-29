@@ -7,7 +7,9 @@ class WeCal {
   dealBracket (str) {
     // 在执行操作前去除多余的符号
     str = this.dropSign(str)
-    while (str.indexOf(')') > 0) {
+    // 判断解括号次数,防止死循环
+    let bracketLength = str.split(')').length - 1
+    for (let i = 0; i < bracketLength; i++) {
       let rightBracketIdx = str.indexOf(')')
       let strInclueBracket = str.substr(0, rightBracketIdx + 1)
       let lastLeftBracketIdx = strInclueBracket.lastIndexOf('(')
@@ -15,8 +17,6 @@ class WeCal {
       str = str.slice(0, lastLeftBracketIdx) + this.dealNeedlessSign(fragment, 1) + str.slice(rightBracketIdx + 1, str.length)
     }
     let newArr = this.cutStr(str)
-    console.log(newArr)
-    debugger
     let value = this.simpleOperation(newArr)
     return value
   }
@@ -119,6 +119,14 @@ class WeCal {
         }
       }
     }
+    // 最后将减号变负数留下的空隙补'+'
+    let idxArr = []
+    for (let i = 0; i < newArr.length; i++) {
+      if (!isNaN(Number(newArr[i - 1])) && !isNaN(Number(newArr[i]))) {
+        idxArr.push(i)
+      }
+    }
+    idxArr.reverse().forEach(item => { newArr.splice(item, 0, '+') })
     return newArr
   }
   // 丢弃多余的符号
