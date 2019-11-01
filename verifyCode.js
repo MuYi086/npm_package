@@ -1,4 +1,4 @@
-class Obj {
+class WeVerifyCode {
   constructor () {
     this.numArr = []
     this.letterArrSm = []
@@ -94,5 +94,5 @@ class Obj {
   }
 }
 // 使用本class需要页面创建一个canvas,且id为canvas
-let obj = new Obj()
-obj.random(3, 5)
+let weVerifyCode = new WeVerifyCode()
+weVerifyCode.random(3, 5)
