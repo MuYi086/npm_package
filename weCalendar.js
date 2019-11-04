@@ -14,6 +14,7 @@ class WeCanlendar {
     this.today = {}
     this.lastThreeMonthDay = []
     this.currentMonthDay = []
+    this.currentMonthFarmDay = []
     this.searchDay = {year: 1900, month: 1, day: 1}
     this.init()
   }
@@ -51,7 +52,10 @@ class WeCanlendar {
     let today = new Date()
     this.today = today
     this.searchDay = {year: today.getFullYear(), month: today.getMonth() + 1, day: today.getDate()}
+    // 计算公历
     this.searchLastThreeMonthDay(this.searchDay)
+    // 计算农历
+    this.calFarmInfo(this.searchDay)
   }
   reset () {
     this.lastThreeMonthDay = []
@@ -139,8 +143,8 @@ class WeCanlendar {
     let currentTimeStamp = new Date(`${year}/${month}/${day}`).getTime()
     let oneDayTimeStamp = 24 * 60 * 60 * 1000
     let len = Math.floor((currentTimeStamp - oldTimeStamp) / oneDayTimeStamp)
-    let todayFarmInfo = this.farmDateArr[len]
-    console.log(todayFarmInfo)
+    // 计算出当前月份的农历信息
+    this.currentMonthFarmDay = this.calCurrentMonthFarmInfo(this.currentMonthDay, this.farmDateArr, len)
   }
   // 将存储的十六进制月份信息解析成2进制
   parsetMonthInfo (yearInfo) {
@@ -187,6 +191,28 @@ class WeCanlendar {
       }
     }
     return farmDateArr
+  }
+  // 计算出当前月份的农历信息
+  calCurrentMonthFarmInfo (normalArr, farmArr, len) {
+    let lenBeafore = 0
+    let lenAfter = 0
+    let currentMonthFarmDay = []
+    for (let i = 0; i < normalArr.length; i++) {
+      if (normalArr[i].isCurrentMonth) {
+        lenBeafore = i
+        lenAfter = normalArr.length - i
+        break
+      }
+    }
+    for (let m = (len - lenBeafore); m < (len + lenAfter); m++) {
+      let year = this.farmDateArr[m].year
+      let month = this.farmDateArr[m].month
+      let day = this.farmDateArr[m].day
+      let isCurrentMonth = m >= len && m <= (len + normalArr.length)
+      let farmItemObj = {year: year, month: month, day: day, isCurrentMonth: isCurrentMonth}
+      currentMonthFarmDay.push(farmItemObj)
+    }
+    return currentMonthFarmDay
   }
 }
 let weCanlendar = new WeCanlendar()
