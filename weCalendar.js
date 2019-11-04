@@ -6,7 +6,11 @@ class WeCanlendar {
     this.gan = []
     this.zhi = []
     this.chineseZodiac = []
+    this.farmMonthArr = []
+    this.pingMonthArr = []
+    this.runMonthArr = []
     this.farmDate = []
+    this.farmDateArr = []
     this.today = {}
     this.lastThreeMonthDay = []
     this.currentMonthDay = []
@@ -20,6 +24,9 @@ class WeCanlendar {
     this.gan = ('甲乙丙丁戊己庚辛壬癸').split('')
     this.zhi = ('子丑寅卯辰巳午未申酉戌亥').split('')
     this.chineseZodiac = ('鼠牛虎兔龙蛇马羊猴鸡狗猪').split('')
+    this.farmMonthArr = ['正月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '腊月']
+    this.pingMonthArr = ['初一', '初二', '初三', '初四', '初五', '初六', '初七', '初八', '初九', '初十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '廿一', '廿二', '廿三', '廿四', '廿五', '廿六', '廿七', '廿八', '廿九']
+    this.runMonthArr = [...this.pingMonthArr, '三十']
     // 后五位16进制转成2进制，不满20位补足20位
     // 17-20表示是否闰月,5-16表示12个月份,1表示30天，0表示29天
     // 第4位表示润月,1表示30天,0表示29天(在有闰月时才有意义)
@@ -40,6 +47,7 @@ class WeCanlendar {
       0x0a4e0, 0x0d260, 0x0ea65, 0x0d530, 0x05aa0, 0x076a3, 0x096d0, 0x04bd7, 0x04ad0,
       0x0a4d0, 0x1d0b6, 0x0d250, 0x0d520, 0x0dd45, 0x0b5a0, 0x056d0, 0x055b2, 0x049b0,
       0x0a577, 0x0a4b0, 0x0aa50, 0x1b255, 0x06d20, 0x0ada0]
+    this.farmDateArr = this.parseFarmInfoByHexCode(this.farmDate)
     let today = new Date()
     this.today = today
     this.searchDay = {year: today.getFullYear(), month: today.getMonth() + 1, day: today.getDate()}
@@ -126,56 +134,13 @@ class WeCanlendar {
     let year = searchDay.year
     let month = searchDay.month
     let day = searchDay.day
-    // 计算与1900/01/30日的总天数,当天是'庚子年正月初一'
-    let oldTimeStamp = new Date('1900/01/30').getTime()
+    // 计算与1900/01/31日的总天数,当天是'庚子年正月初一'
+    let oldTimeStamp = new Date('1900/01/31').getTime()
     let currentTimeStamp = new Date(`${year}/${month}/${day}`).getTime()
     let oneDayTimeStamp = 24 * 60 * 60 * 1000
     let len = Math.floor((currentTimeStamp - oldTimeStamp) / oneDayTimeStamp)
-    console.log(len)
-    this.searchCurrentFarmInfo(len)
-  }
-  // 遍历日期,找出当天的农历
-  searchCurrentFarmInfo (len) {
-    let sum = 0
-    let month = 0
-    let year = 0
-    let lastMonthDay = 0
-    let isRun = false
-    for (let i = 0; i < this.farmDate.length; i++) {
-      let yearInfo = (this.farmDate[i]).toString(2)
-      let parseInfo = this.parsetMonthInfo(yearInfo)
-      let runBigSm = parseInfo[0]
-      let monthInfo = parseInfo[1]
-      let runMonth = parseInfo[2]
-      for (let m = 0; m < monthInfo.length; m++) {
-        sum += Number(monthInfo[m]) === 0 ? 29 : 30
-        if (sum >= len) {
-          month = this.monthArr[m]
-          console.log(lastMonthDay)
-          break
-        }
-        lastMonthDay = sum
-        // 闰月
-        if (runMonth !== 0 && runMonth === m + 1) {
-          sum += runBigSm === 0 ? 29 : 30
-        }
-        if (sum >= len) {
-          isRun = true
-          month = this.monthArr[m - 1]
-          console.log(lastMonthDay)
-          break
-        }
-        lastMonthDay = sum
-      }
-      if (sum >= len) {
-        year = this.yearArr[i]
-        break
-      }
-    }
-    console.log(sum)
-    console.log(month)
-    console.log(year)
-    
+    let todayFarmInfo = this.farmDateArr[len]
+    console.log(todayFarmInfo)
   }
   // 将存储的十六进制月份信息解析成2进制
   parsetMonthInfo (yearInfo) {
@@ -190,6 +155,38 @@ class WeCanlendar {
     }
     let runSmBig = Number(monthInfo.shift())
     return [runSmBig, monthInfo, runMonth]
+  }
+  // 通过十六进制解析农历信息
+  parseFarmInfoByHexCode (arr) {
+    let farmDateArr = []
+    for (let i = 0; i < arr.length; i++) {
+      let yearInfo = (arr[i]).toString(2)
+      let parseInfo = this.parsetMonthInfo(yearInfo)
+      let runBigSm = parseInfo[0]
+      let monthInfo = parseInfo[1]
+      let runMonth = parseInfo[2]
+      for (let m = 0; m < monthInfo.length; m++) {
+        let currentMonth = Number(monthInfo[m]) === 0 ? this.pingMonthArr : this.runMonthArr
+        currentMonth.forEach(item => {
+          let year = this.yearArr[i]
+          let month = this.farmMonthArr[m]
+          let day = item
+          let farmItemObj = {year: year, month: month, day: day, isRunMonth: false}
+          farmDateArr.push(farmItemObj)
+        })
+        if (runMonth === this.monthArr[m]) {
+          let currentMonth = runBigSm === 0 ? this.pingMonthArr : this.runMonthArr
+          currentMonth.forEach(item => {
+            let year = this.yearArr[i]
+            let month = this.farmMonthArr[m]
+            let day = item
+            let farmItemObj = {year: year, month: month, day: day, isRunMonth: true}
+            farmDateArr.push(farmItemObj)
+          })
+        }
+      }
+    }
+    return farmDateArr
   }
 }
 let weCanlendar = new WeCanlendar()
