@@ -2,7 +2,7 @@
 
 #### install
 ```
-npm install weCalendar
+npm install wecalendar
 ```
 
 #### use

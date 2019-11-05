@@ -150,5 +150,4 @@ class WeCal {
   }
 }
 let weCal = new WeCal()
-let str = '-(-5+(-2*33//3****4)-2)+((5*6)/2+2)-23*4/2+43'
-console.log(weCal.dealBracket(str))
+export {weCal}
