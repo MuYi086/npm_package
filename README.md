@@ -1,6 +1,6 @@
 ## NPM_PACKAGE
 
-[中文](./README-CN.md '中文')
+[中文](https://github.com/ougege/npm_package/blob/master/README-CN.md '中文')
 
 #### Introduction
 some useful npm packages
