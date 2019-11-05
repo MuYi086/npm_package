@@ -1,0 +1,15 @@
+{
+  "name": "weverifycode",
+  "version": "1.0.1",
+  "description": "verify code",
+  "main": "weVerifyCode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "verify",
+    "code"
+  ],
+  "author": "ougege",
+  "license": "ISC"
+}

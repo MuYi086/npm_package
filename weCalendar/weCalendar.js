@@ -115,10 +115,12 @@ class WeCanlendar {
   // 搜索对应日期的月份时间
   search (dateStr) {
     // 处理'2019.12.12'或'2019-12-12'或'2019/12/12'格式的时间
-    let dateStrFirst = dateStr.indexOf('-') >= 0 ? dateStr.replace(/-/g, '|') : dateStr
-    let dateStrSecond = dateStrFirst.indexOf('-') >= 0 ? dateStrFirst.replace(/./g, '|') : dateStrFirst
-    let dateStrThird = dateStrSecond.indexOf('/') >= 0 ? dateStrSecond.replace(/\//g, '|') : dateStrSecond
-    let newDateArr = this.arrTransToNum(dateStrThird.split('|'))
+    let dateArr = dateStr.split('')
+    let dealArr = []
+    dateArr.forEach(item => {
+      dealArr.push(isNaN(Number(item)) ? '|' : item)
+    })
+    let newDateArr = this.arrTransToNum((dealArr.join('')).split('|'))
     this.reset()
     this.searchDay = {year: newDateArr[0], month: newDateArr[1], day: newDateArr[2]}
     this.searchLastThreeMonthDay(this.searchDay)
@@ -216,5 +218,4 @@ class WeCanlendar {
   }
 }
 let weCanlendar = new WeCanlendar()
-this.weCanlendar = weCanlendar
-console.log(weCanlendar)
+export {weCanlendar}
