@@ -1,5 +1,8 @@
 ## weVerifyCode
 
+#### 英文阅读
+[英文](./README.md '英文')
+
 #### 安装
 ```
 npm install weverifycode

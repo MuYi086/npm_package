@@ -19,7 +19,7 @@ https://www.npmjs.com/package/weverifycode
 ```
 
 #### weCalendar
-calculate one day to it's month 
+calculate one day to it's month
 计算出任意年月日所对应月份公历
 ```
 https://www.npmjs.com/package/wecalendar
