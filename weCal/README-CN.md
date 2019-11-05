@@ -1,7 +1,6 @@
 ## weCal
 
-#### 英文阅读
-[英文](./README.md '英文')
+[English](./README.md 'English')
 
 #### 安装
 ```

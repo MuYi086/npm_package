@@ -1,6 +1,5 @@
 ## weVerifyCode
 
-#### Read in Chinese
 [中文](./README-CN.md '中文')
 
 #### install

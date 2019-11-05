@@ -1,9 +1,8 @@
 ## NPM包
 
-#### 英文阅读
 [英文](./README.md '英文')
 
-#### npm包
+#### 介绍
 一些有用的npm包
 
 #### weCal
@@ -19,7 +18,7 @@ https://www.npmjs.com/package/weverifycode
 ```
 
 #### weCalendar
-计算出任意年月日所对应月份公历
+计算出任意年月日所对应月份公历和农历
 ```
 https://www.npmjs.com/package/wecalendar
 ```

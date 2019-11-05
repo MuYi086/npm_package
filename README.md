@@ -1,13 +1,12 @@
 ## NPM_PACKAGE
 
-#### Read in Chinese
 [中文](./README-CN.md '中文')
 
-#### npm_packages
+#### Introduction
 some useful npm packages
 
 #### weCal
-用于替代eval的部分功能,实现字符串运算：多层级括号的加减乘除,增加负数运算
+Some functions used to replace Eval By calculate expression：Addition, subtraction, multiplication and division of multi-level brackets,negative
 ```
 https://www.npmjs.com/package/wecal
 ```
@@ -19,8 +18,7 @@ https://www.npmjs.com/package/weverifycode
 ```
 
 #### weCalendar
-calculate one day to it's month
-计算出任意年月日所对应月份公历
+calculate one day to the Gregorian calendar and lunar calendar
 ```
 https://www.npmjs.com/package/wecalendar
 ```
