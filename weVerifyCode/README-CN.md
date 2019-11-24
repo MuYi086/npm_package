@@ -3,28 +3,25 @@
 [English](./README.md 'English')
 
 #### 安装
-```
+```SHELL
 npm install weverifycode
 ```
 
 #### 使用
-```
+```JS
 // 页面创建一个元素
 <canvas id="canvas"></canvas>
 // 导入和使用
 let util = require('weverifycode')
 util.weVerifyCode.random(3, 5)
-
-#### 函数
+// 完整方法
 random(type, len, slash = true, point = true)
-1. type: (混合类型) 不能为空 类型数字
-    * 1: 纯数字
-    * 2: 纯字母
-    * 3: 数字和字母
+```
+#### 函数
 
-1. len: (生成的验证码长度) 不能为空 数字
-
-1. slash: (是否显示斜线) 可选 布尔值
-    * 默认 true
-1. point: (是否显示点) 可选 布尔值
-    * 默认 true
+函数名|参数|默认|是否必需|描述|
+--|--|--|--|--|
+random|type|数字|必需|1: 纯数字;2: 纯字母;3: 数字和字母|
+random|len|数字|必需|生成的验证码长度|
+random|slash|布尔 true|非必需|是否显示斜线|
+random|point|布尔 true|非必需|是否显示点|

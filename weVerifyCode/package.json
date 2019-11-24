@@ -1,6 +1,6 @@
 {
   "name": "weverifycode",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "verify code",
   "main": "weVerifyCode.js",
   "scripts": {

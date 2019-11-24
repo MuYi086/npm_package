@@ -3,28 +3,26 @@
 [中文](https://github.com/ougege/npm_package/blob/master/weVerifyCode/README-CN.md '中文')
 
 #### install
-```
+```SHELL
 npm install weverifycode
 ```
 
 #### use
-```
+```JS
 // dom create
 <canvas id="canvas"></canvas>
 // import and use
 let util = require('weverifycode')
 util.weVerifyCode.random(3, 5)
+// full code
+random(type, len, slash = true, point = true)
+```
 
 #### function
-random(type, len, slash = true, point = true)
-1. type: (code type mix) required number
-    * 1: number
-    * 2: letter
-    * 3: number and letter
 
-1. len: (code length) required number
-
-1. slash: (has slash) optional boolean
-    * default true
-1. point: (has point) optional boolean
-    * default true
+function|parameter|default|required|description|
+--|--|--|--|--|
+random|type|number|required|code type mix (1: number;2: letter;3: number and letter)|
+random|len|number|required|code length|
+random|slash|Boolean true|optional|has slash|
+random|point|Boolean true|optional|has point|
