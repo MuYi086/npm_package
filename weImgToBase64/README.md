@@ -12,13 +12,13 @@ npm install weimgtobase64
 const util = require('weimgtobase64')
 // parse img url
 let url = 'http://img.qipeiren.com/UploadFile/UserProPic/2019/11/23/4b65b8aadcfb0ac65a91.jpg'
-console.log(util.weImgToBase64.parse(imgOjb))
+console.log(util.weImgToBase64.parse(url))
 // parse img object
 let img = document.getElementById('test')
-console.log(util.weImgToBase64.parse(imgOjb))
+console.log(util.weImgToBase64.parse(img))
 // useCanvas img object
 let img = document.getElementById('test')
-console.log(util.weImgToBase64.useCanvas(imgOjb))
+console.log(util.weImgToBase64.useCanvas(img))
 ```
 
 #### function
