@@ -22,3 +22,9 @@ calculate one day to the Gregorian calendar and lunar calendar
 ```
 https://www.npmjs.com/package/wecalendar
 ```
+
+#### weImgToBase64
+trans img object or img url to base64
+```
+https://www.npmjs.com/package/weimgtobase64
+```

@@ -22,3 +22,9 @@ https://www.npmjs.com/package/weverifycode
 ```
 https://www.npmjs.com/package/wecalendar
 ```
+
+#### weImgToBase64
+将图片转成base64
+```
+https://www.npmjs.com/package/weimgtobase64
+```
