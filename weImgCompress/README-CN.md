@@ -1,4 +1,4 @@
-## weCal
+## weImgCompress
 
 [English](./README.md 'English')
 

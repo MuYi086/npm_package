@@ -1,4 +1,4 @@
-## weImgToBase64
+## weImgCompress
 
 [中文](https://github.com/ougege/npm_package/blob/master/weImgCompress/README-CN.md '中文')
 
