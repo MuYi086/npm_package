@@ -1,0 +1,15 @@
+{
+  "name": "weimgcompress",
+  "version": "1.0.0",
+  "description": "img compress",
+  "main": "weImgCompress",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "img",
+    "compress"
+  ],
+  "author": "ougege",
+  "license": "ISC"
+}

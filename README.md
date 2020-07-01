@@ -28,3 +28,9 @@ trans img object or img url to base64
 ```
 https://www.npmjs.com/package/weimgtobase64
 ```
+
+#### weImgCompress
+compress img by canvas
+```
+https://www.npmjs.com/package/weimgcompress
+```

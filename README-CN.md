@@ -28,3 +28,9 @@ https://www.npmjs.com/package/wecalendar
 ```
 https://www.npmjs.com/package/weimgtobase64
 ```
+
+#### weImgCompress
+使用canvas压缩图片
+```
+https://www.npmjs.com/package/weimgcompress
+```
