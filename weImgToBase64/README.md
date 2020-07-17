@@ -5,20 +5,23 @@
 #### install
 ```SHELL
 npm install weimgtobase64
+# common JS
+const weimgtobase64 = require('weimgtobase64')
+# es6
+import weimgtobase64 from 'weimgtobase64'
 ```
 
 #### use
 ```JS
-const util = require('weimgtobase64')
 // parse img url
 let url = 'http://img.qipeiren.com/UploadFile/UserProPic/2019/11/23/4b65b8aadcfb0ac65a91.jpg'
-console.log(util.weImgToBase64.parse(url))
+console.log(weimgtobase64.parse(url))
 // parse img object
 let img = document.getElementById('test')
-console.log(util.weImgToBase64.parse(img))
+console.log(weimgtobase64.parse(img))
 // useCanvas img object
 let img = document.getElementById('test')
-console.log(util.weImgToBase64.useCanvas(img))
+console.log(weimgtobase64.useCanvas(img))
 ```
 
 #### function

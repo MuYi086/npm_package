@@ -4,12 +4,15 @@
 
 #### 安装
 ```SHELL
-npm install weimgtobase64
+npm install weImgCompress
+# common JS
+const weimgcompress = require('weimgcompress')
+# es6
+import weimgcompress from 'weimgcompress'
 ```
 
 #### 使用
 ```JS
-import weimgcompress from 'weimgcompress'
 // 压缩图片,返回base64
 console.log(weimgcompress.compress(imgObj, quality))
 // 下载已压缩的图片

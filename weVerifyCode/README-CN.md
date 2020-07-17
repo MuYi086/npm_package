@@ -5,6 +5,10 @@
 #### 安装
 ```SHELL
 npm install weverifycode
+# common JS
+const weverifycode = require('weverifycode')
+# es6
+import weverifycode from 'weverifycode'
 ```
 
 #### 使用
@@ -12,8 +16,7 @@ npm install weverifycode
 // 页面创建一个元素
 <canvas id="canvas"></canvas>
 // 导入和使用
-let util = require('weverifycode')
-util.weVerifyCode.random(3, 5)
+weverifycode.random(3, 5)
 // 完整方法
 random(type, len, slash = true, point = true)
 ```

@@ -95,4 +95,4 @@ class WeVerifyCode {
 }
 // 使用本class需要页面创建一个canvas,且id为canvas
 let weVerifyCode = new WeVerifyCode()
-export {weVerifyCode}
+module.exports = weVerifyCode

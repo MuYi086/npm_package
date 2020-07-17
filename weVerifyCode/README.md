@@ -5,6 +5,10 @@
 #### install
 ```SHELL
 npm install weverifycode
+# common JS
+const weverifycode = require('weverifycode')
+# es6
+import weverifycode from 'weverifycode'
 ```
 
 #### use
@@ -12,8 +16,7 @@ npm install weverifycode
 // dom create
 <canvas id="canvas"></canvas>
 // import and use
-let util = require('weverifycode')
-util.weVerifyCode.random(3, 5)
+weverifycode.random(3, 5)
 // full code
 random(type, len, slash = true, point = true)
 ```

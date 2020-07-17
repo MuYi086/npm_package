@@ -5,11 +5,14 @@
 #### install
 ```SHELL
 npm install weimgcompress
+# common JS
+const weimgcompress = require('weimgcompress')
+# es6
+import weimgcompress from 'weimgcompress'
 ```
 
 #### use
 ```JS
-import weimgcompress from 'weimgcompress'
 // compress img, return base64
 console.log(weimgcompress.compress(imgObj, quality))
 // download compressed img

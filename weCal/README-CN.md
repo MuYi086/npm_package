@@ -5,13 +5,16 @@
 #### 安装
 ```SHELL
 npm install wecal
+# common JS
+const wecal = require('wecal')
+# es6
+import wecal from 'wecal'
 ```
 
 #### 使用
 ```JS
-let util = require('wecal')
 let str = '-(-5+(-2*33//3****4)-2)+((5*6)/2+2)-23*4/2+43'
-let value = util.weCal.dealBracket(str)
+let value = wecal.dealBracket(str)
 ```
 
 #### 函数

@@ -150,4 +150,4 @@ class WeCal {
   }
 }
 let weCal = new WeCal()
-export {weCal}
+module.exports = weCal

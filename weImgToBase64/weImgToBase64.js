@@ -34,4 +34,4 @@ class WeImgToBase64 {
   }
 }
 const weImgToBase64 = new WeImgToBase64()
-export { weImgToBase64 }
+module.exports = weImgToBase64

@@ -5,12 +5,16 @@
 #### 安装
 ```SHELL
 npm install wecalendar
+# common JS
+const wecalendar = require('wecalendar')
+# es6
+import wecalendar from 'wecalendar'
 ```
 
 #### 使用
 ```JS
-// 初始化后所有信息存储在util对象中
-let util = require('wecalendar')
+// 初始化后所有信息存储在wecalendar对象中
+console.log(wecalendar)
 ```
 
 #### 属性说明

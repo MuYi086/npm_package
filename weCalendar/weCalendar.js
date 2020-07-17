@@ -218,4 +218,4 @@ class WeCanlendar {
   }
 }
 let weCanlendar = new WeCanlendar()
-export {weCanlendar}
+module.exports = weCanlendar

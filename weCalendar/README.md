@@ -5,12 +5,16 @@
 #### install
 ```SHELL
 npm install wecalendar
+# common JS
+const wecalendar = require('wecalendar')
+# es6
+import wecalendar from 'wecalendar'
 ```
 
 #### use
 ```JS
-// all data is in object util after init
-let util = require('wecalendar')
+// all data is in object wecalendar after init
+console.log(wecalendar)
 ```
 
 #### attr explain
