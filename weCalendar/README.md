@@ -4,7 +4,7 @@
 
 #### install
 ```SHELL
-npm install wecalendar
+npm install wecanlendar
 # common JS
 const wecalendar = require('wecalendar')
 # es6
