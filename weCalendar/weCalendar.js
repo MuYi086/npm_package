@@ -16,6 +16,8 @@ class WeCanlendar {
     this.currentMonthDay = []
     this.currentMonthFarmDay = []
     this.searchDay = {year: 1900, month: 1, day: 1}
+    this.prevMonthObj = {}
+    this.nextMonthObj = {}
     this.init()
   }
   init () {
@@ -50,8 +52,11 @@ class WeCanlendar {
       0x0a577, 0x0a4b0, 0x0aa50, 0x1b255, 0x06d20, 0x0ada0]
     this.farmDateArr = this.parseFarmInfoByHexCode(this.farmDate)
     let today = new Date()
+    let year = today.getFullYear()
+    let month = today.getMonth() + 1
+    let day = today.getDate()
     this.today = today
-    this.searchDay = {year: today.getFullYear(), month: today.getMonth() + 1, day: today.getDate()}
+    this.searchDay = {year: year, month: month, day: day}
     // 计算公历
     this.searchLastThreeMonthDay(this.searchDay)
     // 计算农历
@@ -68,6 +73,16 @@ class WeCanlendar {
     let month = searchDay.month
     let prevMonthStr = month === 1 ? `${year - 1}/12/15` : `${year}/${month - 1}/15`
     let nextMonthStr = month === 12 ? `${year + 1}/1/15` : `${year}/${month + 1}/15`
+    this.prevMonthObj = {
+      year: month === 1 ? year - 1 : year,
+      month: month === 1 ? 12 : month - 1,
+      day: 15
+    }
+    this.nextMonthObj = {
+      year: month === 12 ? year + 1 : year,
+      month: month === 12 ? 1 : month + 1,
+      day: 15
+    }
     let prevTimeStamp = new Date(prevMonthStr).getTime()
     let nextTimeStamp = new Date(nextMonthStr).getTime()
     let oneDayTimeStamp = 24 * 60 * 60 * 1000

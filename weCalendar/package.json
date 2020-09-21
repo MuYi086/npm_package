@@ -1,6 +1,6 @@
 {
   "name": "wecanlendar",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "canlendar with Gregorian and lunar",
   "main": "weCalendar.js",
   "scripts": {
