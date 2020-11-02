@@ -115,8 +115,11 @@ class WeCanlendar {
         break
       }
     }
+    // 日历表实际开头星期一: 1-6直接减，０相当于减７
+    let cutLength = this.lastThreeMonthDay[monthStartIdx].weekDay == 0 ? 7 : this.lastThreeMonthDay[monthStartIdx].weekDay
+    let calStartMonIdx = monthStartIdx - cutLength
     // 日历表实际开头星期一
-    let calStartMonIdx = monthStartIdx - this.lastThreeMonthDay[monthStartIdx].weekDay
+    // let calStartMonIdx = monthStartIdx - this.lastThreeMonthDay[monthStartIdx].weekDay
     // 日历表实际结尾星期日
     let calEndSunIdx = monthEndIdx + (6 - this.lastThreeMonthDay[monthEndIdx].weekDay)
     for (let i = 1; i <= calEndSunIdx - calStartMonIdx + 1; i++) {
