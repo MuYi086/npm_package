@@ -34,3 +34,9 @@ https://www.npmjs.com/package/weimgtobase64
 ```
 https://www.npmjs.com/package/weimgcompress
 ```
+
+#### weweValidator
+做一些有用的校验
+```
+https://www.npmjs.com/package/wewevalidator
+```

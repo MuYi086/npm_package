@@ -1,0 +1,16 @@
+{
+  "name": "wewevalidator",
+  "version": "0.0.1",
+  "description": "do some useful validate",
+  "main": "weweValidator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "validator",
+    "verify",
+    "check"
+  ],
+  "author": "ougege",
+  "license": "ISC"
+}

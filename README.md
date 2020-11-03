@@ -34,3 +34,9 @@ compress img by canvas
 ```
 https://www.npmjs.com/package/weimgcompress
 ```
+
+#### weweValidator
+do some useful validator
+```
+https://www.npmjs.com/package/wewevalidator
+```
