@@ -1,6 +1,7 @@
 class WeWeValidator {
   constructor () {
     // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，普通字符串
+    // 不是常规的label名称，校验时直接输入label名称即可，例如: verify (value, '地区', limitLength)
     this.typeArr = ['phone', 'telPhone', 'email', 'password', 'dateTime', 'identityCard', 'default']
     this.typeKeyValue = [
       { key: 'phone', value: '手机号' },
@@ -140,6 +141,14 @@ class WeWeValidator {
           msg = this.autoComplementLabelName(labelName, 1)
         }
         break
+      default: 
+        if (value) {
+          result = 1
+          msg = ''
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
     }
     return [result, msg]
   }
@@ -160,9 +169,9 @@ class WeWeValidator {
     }
   }
 
-  // 根据key解析出对应的value
+  // 根据key解析出对应的value:有就返回解的label，否则返回原始key
   parseKeyValue (key) {
-    let value = ''
+    let value = key
     this.typeKeyValue.forEach(tkv => {
       if (key === tkv.key) {
         value = tkv.value

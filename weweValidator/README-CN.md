@@ -41,6 +41,11 @@ let value = wewevalidator.verify(identityCard, 'identityCard')
 let password = 'helloWorld888'
 let limitLength = 10
 let value = wewevalidator.verify(password, 'password', limitLength)
+
+// 检验非常规字段
+// 校验时直接输入label名称即可，例如: verify (value, '地区')
+let address = '杭州市'
+let value = wewevalidator.verify(address, '地区')
 ```
 
 #### 属性说明
