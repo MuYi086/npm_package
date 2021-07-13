@@ -4,11 +4,11 @@
 
 #### install
 ```SHELL
-npm install wewewevalidator
+npm install wewevalidator
 # common JS
-const wewewevalidator = require('wewewevalidator')
+const wewevalidator = require('wewevalidator')
 # es6
-import wewewevalidator from 'wewewevalidator'
+import wewevalidator from 'wewevalidator'
 ```
 
 #### use
