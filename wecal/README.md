@@ -2,6 +2,8 @@
 
 [中文](https://github.com/ougege/npm_package/blob/master/wecal/README-CN.md '中文')
 
+![npm](https://img.shields.io/npm/v/wecal) ![npm bundle size](https://img.shields.io/bundlephobia/min/wecal) ![npm](https://img.shields.io/npm/dt/wecal) ![GitHub](https://img.shields.io/github/license/ougege/npm_package)
+
 #### install
 ```SHELL
 npm install wecal

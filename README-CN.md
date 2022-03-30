@@ -2,6 +2,8 @@
 
 [英文](./README.md '英文')
 
+![Powered By](https://img.shields.io/badge/Author-ougege-yellow) ![GitHub](https://img.shields.io/github/license/ougege/npm_package) ![GitHub Repo stars](https://img.shields.io/github/stars/ougege/npm_package?style=social)
+
 #### 介绍
 一些有用的npm包
 

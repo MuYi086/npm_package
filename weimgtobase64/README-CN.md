@@ -2,6 +2,8 @@
 
 [English](./README.md 'English')
 
+![npm](https://img.shields.io/npm/v/weimgtobase64) ![npm bundle size](https://img.shields.io/bundlephobia/min/weimgtobase64) ![npm](https://img.shields.io/npm/dt/weimgtobase64) ![GitHub](https://img.shields.io/github/license/ougege/npm_package)
+
 #### 安装
 ```SHELL
 npm install weimgtobase64

@@ -2,6 +2,8 @@
 
 [English](./README.md 'English')
 
+![npm](https://img.shields.io/npm/v/weimgcompress) ![npm bundle size](https://img.shields.io/bundlephobia/min/weimgcompress) ![npm](https://img.shields.io/npm/dt/weimgcompress) ![GitHub](https://img.shields.io/github/license/ougege/npm_package)
+
 #### 安装
 ```SHELL
 npm install weimgcompress

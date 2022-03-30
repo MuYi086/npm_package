@@ -2,6 +2,8 @@
 
 [English](./README.md 'English')
 
+![npm](https://img.shields.io/npm/v/wewevalidator) ![npm bundle size](https://img.shields.io/bundlephobia/min/wewevalidator) ![npm](https://img.shields.io/npm/dt/wewevalidator) ![GitHub](https://img.shields.io/github/license/ougege/npm_package)
+
 #### 安装
 ```SHELL
 npm install wewevalidator
