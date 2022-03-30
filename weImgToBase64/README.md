@@ -1,6 +1,6 @@
-## weImgToBase64
+## weimgtobase64
 
-[中文](https://github.com/ougege/npm_package/blob/master/weImgToBase64/README-CN.md '中文')
+[中文](https://github.com/ougege/npm_package/blob/master/weimgtobase64/README-CN.md '中文')
 
 #### install
 ```SHELL

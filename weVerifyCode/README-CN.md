@@ -1,4 +1,4 @@
-## weVerifyCode
+## weverifycode
 
 [English](./README.md 'English')
 

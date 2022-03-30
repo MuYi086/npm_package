@@ -1,4 +1,4 @@
-## weCalendar
+## wecalendar
 
 [English](./README.md 'English')
 

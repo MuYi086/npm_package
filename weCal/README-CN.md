@@ -1,4 +1,4 @@
-## weCal
+## wecal
 
 [English](./README.md 'English')
 

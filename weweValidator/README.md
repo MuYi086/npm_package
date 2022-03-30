@@ -1,6 +1,6 @@
-## weweValidator
+## wewevalidator
 
-[中文](https://github.com/ougege/npm_package/blob/master/weweValidator/README-CN.md '中文')
+[中文](https://github.com/ougege/npm_package/blob/master/wewevalidator/README-CN.md '中文')
 
 #### install
 ```SHELL

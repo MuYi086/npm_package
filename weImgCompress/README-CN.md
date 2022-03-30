@@ -1,10 +1,10 @@
-## weImgCompress
+## weimgcompress
 
 [English](./README.md 'English')
 
 #### 安装
 ```SHELL
-npm install weImgCompress
+npm install weimgcompress
 # common JS
 const weimgcompress = require('weimgcompress')
 # es6

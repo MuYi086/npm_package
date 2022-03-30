@@ -1,6 +1,6 @@
-## weCal
+## wecal
 
-[中文](https://github.com/ougege/npm_package/blob/master/weCal/README-CN.md '中文')
+[中文](https://github.com/ougege/npm_package/blob/master/wecal/README-CN.md '中文')
 
 #### install
 ```SHELL

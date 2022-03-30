@@ -1,6 +1,6 @@
-## weImgCompress
+## weimgcompress
 
-[中文](https://github.com/ougege/npm_package/blob/master/weImgCompress/README-CN.md '中文')
+[中文](https://github.com/ougege/npm_package/blob/master/weimgcompress/README-CN.md '中文')
 
 #### install
 ```SHELL

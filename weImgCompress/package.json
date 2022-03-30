@@ -2,7 +2,7 @@
   "name": "weimgcompress",
   "version": "1.0.2",
   "description": "img compress",
-  "main": "weImgCompress",
+  "main": "weImgCompress.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
