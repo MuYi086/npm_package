@@ -1,15 +1,16 @@
 class WeWeValidator {
   constructor () {
-    // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，普通字符串
+    // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，网址，普通字符串
     // 不是常规的label名称，校验时直接输入label名称即可，例如: verify (value, '地区', limitLength)
-    this.typeArr = ['phone', 'telPhone', 'email', 'password', 'dateTime', 'identityCard', 'default']
+    this.typeArr = ['phone', 'telPhone', 'email', 'password', 'dateTime', 'identityCard', 'website', 'default']
     this.typeKeyValue = [
       { key: 'phone', value: '手机号' },
       { key: 'telPhone', value: '座机号' },
       { key: 'email', value: '邮箱' },
       { key: 'password', value: '密码' },
       { key: 'dateTime', value: '日期' },
-      { key: 'identityCard', value: '身份证号' }
+      { key: 'identityCard', value: '身份证号' },
+      { key: 'website', value: '网址' }
     ]
   }
 
@@ -130,6 +131,20 @@ class WeWeValidator {
       case 'identityCard':
         if (value) {
           if (/^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      case 'website':
+        if (value) {
+          if (/^(?:(http|https|ftp):\/\/)?((?:[\w-]+\.)+[a-z0-9]+)((?:\/[^/?#]*)+)?(\?[^#]+)?(#.+)?$/g.test(value)) {
             result = 1
             msg = ''
           } else {

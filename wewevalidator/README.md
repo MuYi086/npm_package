@@ -39,6 +39,10 @@ let value = wewevalidator.verify(dateTime, 'dateTime')
 let identityCard = '43062319181212003X'
 let value = wewevalidator.verify(identityCard, 'identityCard')
 
+// website
+let url = 'www.baidu.com'
+let value = wewevalidator.verify(url, 'website')
+
 // verify length
 let password = 'helloWorld888'
 let limitLength = 10
