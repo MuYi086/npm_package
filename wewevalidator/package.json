@@ -1,8 +1,8 @@
 {
   "name": "wewevalidator",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "do some useful validate",
-  "main": "wewevalidator.js",
+  "main": "weweValidator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
