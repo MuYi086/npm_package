@@ -1,10 +1,14 @@
 {
   "name": "wecalendar",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "canlendar with Gregorian and lunar",
   "main": "weCalendar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ougege/npm_package.git"
   },
   "keywords": [
     "Gregorian",
@@ -12,5 +16,9 @@
     "Lunar"
   ],
   "author": "ougege",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ougege/npm_package/issues"
+  },
+  "homepage": "https://github.com/ougege/npm_package#readme"
 }

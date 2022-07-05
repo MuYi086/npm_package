@@ -1,15 +1,23 @@
 {
   "name": "weimgcompress",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "img compress",
   "main": "weImgCompress.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ougege/npm_package.git"
   },
   "keywords": [
     "img",
     "compress"
   ],
   "author": "ougege",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ougege/npm_package/issues"
+  },
+  "homepage": "https://github.com/ougege/npm_package#readme"
 }

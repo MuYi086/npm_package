@@ -1,10 +1,14 @@
 {
   "name": "wewevalidator",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "do some useful validate",
   "main": "weweValidator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ougege/npm_package.git"
   },
   "keywords": [
     "validator",
@@ -12,5 +16,9 @@
     "check"
   ],
   "author": "ougege",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ougege/npm_package/issues"
+  },
+  "homepage": "https://github.com/ougege/npm_package#readme"
 }

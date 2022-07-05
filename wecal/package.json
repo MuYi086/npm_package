@@ -1,10 +1,14 @@
 {
   "name": "wecal",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "calculate a string expression",
   "main": "weCal.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ougege/npm_package.git"
   },
   "keywords": [
     "calculate",
@@ -13,5 +17,9 @@
     "expression"
   ],
   "author": "ougege",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ougege/npm_package/issues"
+  },
+  "homepage": "https://github.com/ougege/npm_package#readme"
 }

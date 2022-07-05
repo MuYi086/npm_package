@@ -8,50 +8,78 @@
 ```SHELL
 npm install wewevalidator
 # common JS
-const wewevalidator = require('wewevalidator')
+const weweValidator = require('wewevalidator')
 # es6
-import wewevalidator from 'wewevalidator'
+import weweValidator from 'wewevalidator'
 ```
 
 #### use
 ```JS
 // phone
-let phone = '15507810249'
-let value = wewevalidator.verify(phone, 'phone')
+const phone = '15507810249'
+const value = weweValidator.verify(phone, 'phone')
 
 // telPhone
-let telPhone = '0571-4340259'
-let value = wewevalidator.verify(telPhone, 'telPhone')
+const telPhone = '0571-4340259'
+const value = weweValidator.verify(telPhone, 'telPhone')
 
 // email
-let email = 'yanglu4340@gmail.com'
-let value = wewevalidator.verify(email, 'email')
+const email = 'yanglu4340@gmail.com'
+const value = weweValidator.verify(email, 'email')
 
 // password
-let password = 'helloWorld888'
-let value = wewevalidator.verify(password, 'password')
+const password = 'helloWorld888'
+const value = weweValidator.verify(password, 'password')
 
 // dateTime
-let dateTime = '2020-11-03'
-let value = wewevalidator.verify(dateTime, 'dateTime')
+const dateTime = '2020-11-03'
+const value = weweValidator.verify(dateTime, 'dateTime')
 
 // identityCard
-let identityCard = '43062319181212003X'
-let value = wewevalidator.verify(identityCard, 'identityCard')
+const identityCard = '43062319181212003X'
+const value = weweValidator.verify(identityCard, 'identityCard')
 
 // website
-let url = 'www.baidu.com'
-let value = wewevalidator.verify(url, 'website')
+const url = 'www.baidu.com'
+const value = weweValidator.verify(url, 'website')
+
+// taxnum
+const taxnum = '259595959529592'
+const value = weweValidator.verify(taxnum, 'taxnum')
+
+// isNum
+const temp = '259595'
+const value = weweValidator.verify(temp, 'isNum')
+
+// isImg
+const temp = 'jpg'
+const value = weweValidator.verify(temp, 'isImg')
+
+// isVideo
+const temp = 'mp4'
+const value = weweValidator.verify(temp, 'isVideo')
+
+// isAudio
+const temp = 'mp3'
+const value = weweValidator.verify(temp, 'isAudio')
+
+// isconstter
+const temp = 'mp3'
+const value = weweValidator.verify(temp, 'isconstter')
+
+// isNumconstter
+const temp = 'mp3'
+const value = weweValidator.verify(temp, 'isNumconstter')
 
 // verify length
-let password = 'helloWorld888'
-let limitLength = 10
-let value = wewevalidator.verify(password, 'password', limitLength)
+const password = 'helloWorld888'
+const limitLength = 10
+const value = weweValidator.verify(password, 'password', limitLength)
 
 // verify general fields
 // input label name，example: verify (value, '地区')
-let address = '杭州市'
-let value = wewevalidator.verify(address, '地区')
+const address = '杭州市'
+const value = weweValidator.verify(address, '地区')
 ```
 
 #### attr explain

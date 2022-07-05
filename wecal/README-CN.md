@@ -15,8 +15,8 @@ import wecal from 'wecal'
 
 #### 使用
 ```JS
-let str = '-(-5+(-2*33//3****4)-2)+((5*6)/2+2)-23*4/2+43'
-let value = wecal.dealBracket(str)
+const str = '-(-5+(-2*33//3****4)-2)+((5*6)/2+2)-23*4/2+43'
+const value = wecal.dealBracket(str)
 ```
 
 #### 函数

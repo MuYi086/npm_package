@@ -1,14 +1,22 @@
 {
   "name": "weimgtobase64",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "trans img to base64",
   "main": "weImgToBase64.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ougege/npm_package.git"
+  },
   "keywords": [
     "base64"
   ],
   "author": "ougege",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ougege/npm_package/issues"
+  },
+  "homepage": "https://github.com/ougege/npm_package#readme"
 }

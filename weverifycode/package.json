@@ -1,15 +1,23 @@
 {
   "name": "weverifycode",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "verify code",
   "main": "weVerifyCode.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ougege/npm_package.git"
   },
   "keywords": [
     "verify",
     "code"
   ],
   "author": "ougege",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ougege/npm_package/issues"
+  },
+  "homepage": "https://github.com/ougege/npm_package#readme"
 }

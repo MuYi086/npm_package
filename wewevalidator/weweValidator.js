@@ -1,8 +1,9 @@
 class WeWeValidator {
   constructor () {
-    // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，网址，普通字符串
+    // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，网址，税号，普通字符串
+    // 判断布尔类型: isNum, isImg, isVideo, isAudio, isLetter, isNumLetter
     // 不是常规的label名称，校验时直接输入label名称即可，例如: verify (value, '地区', limitLength)
-    this.typeArr = ['phone', 'telPhone', 'email', 'password', 'dateTime', 'identityCard', 'website', 'default']
+    this.typeArr = ['phone', 'telPhone', 'email', 'password', 'dateTime', 'identityCard', 'website', 'taxnum', 'isNum', 'isImg', 'isVideo', 'isAudio', 'isLetter', 'isNumLetter', 'default']
     this.typeKeyValue = [
       { key: 'phone', value: '手机号' },
       { key: 'telPhone', value: '座机号' },
@@ -10,7 +11,14 @@ class WeWeValidator {
       { key: 'password', value: '密码' },
       { key: 'dateTime', value: '日期' },
       { key: 'identityCard', value: '身份证号' },
-      { key: 'website', value: '网址' }
+      { key: 'website', value: '网址' },
+      { key: 'taxnum', value: '税号' },
+      { key: 'isNum', value: '是否数字' },
+      { key: 'isImg', value: '是否图片' },
+      { key: 'isVideo', value: '是否视频' },
+      { key: 'isAudio', value: '是否音频' },
+      { key: 'isLetter', value: '是否字母' },
+      { key: 'isNumLetter', value: '是否数字字母' }
     ]
   }
 
@@ -86,9 +94,9 @@ class WeWeValidator {
         if (value) {
           let sum = 0
           // 匹配数字
-          if (/[0-9]/g.test(value)) { sum++ }
+          if (/^[0-9]+$/g.test(value)) { sum++ }
           // 匹配字母
-          if (/[a-zA-Z]/g.test(value)) { sum++ }
+          if (/^[a-zA-Z]+$/g.test(value)) { sum++ }
           // 匹配特殊字符
           if (/!|@|#|\$|%|\^|&|\*|\(|\)|_|\+|-|=/g.test(value)) { sum++ }
           if (sum >= 2) {
@@ -145,6 +153,112 @@ class WeWeValidator {
       case 'website':
         if (value) {
           if (/^(?:(http|https|ftp):\/\/)?((?:[\w-]+\.)+[a-z0-9]+)((?:\/[^/?#]*)+)?(\?[^#]+)?(#.+)?$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      // 税号: 阿拉伯数字或英文字母,15或18个字符
+      case 'taxnum':
+        if (value) {
+          if (/^\w{1,}$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      // 是否数字
+      case 'isNum':
+        if (value) {
+          if (/^\d{1,}$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      // 是否能预览的图片格式:jpg|jpeg|png|webp|gif|svg
+      // 参考:https://www.cnblogs.com/langqq/p/11671785.html
+      case 'isImg':
+        if (value) {
+          if (/(jpg|jpeg|png|webp|gif|svg|JPG|JPEG|PNG|WEBP|GIF|SVG)$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      // 是否视频
+      // 参考:https://product.pconline.com.cn/itbk/software/dnwt/1504/6324496.html?_t_t_t=0.8887045967858285
+      case 'isVideo':
+        if (value) {
+          if (/(wmv|asf|asx|rm|rmvb|mpg|mpeg|mpe|3gp|mov|mp4|m4v|avi|dat|mkv|flv|vob)$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      // 是否音频
+      // 参考:https://baijiahao.baidu.com/s?id=1727868624889700721&wfr=spider&for=pc
+      case 'isAudio':
+        if (value) {
+          if (/(mp3|wav|wma|ogg|mp2|flac|midi|ra|ape|acc|cda|mov)$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      case 'isLetter':
+        if (value) {
+          if (/^[a-zA-Z]+$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      case 'isNumLetter':
+        if (value) {
+          if (/^\w{1,}$/g.test(value)) {
             result = 1
             msg = ''
           } else {
