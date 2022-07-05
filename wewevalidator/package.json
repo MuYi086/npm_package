@@ -1,6 +1,6 @@
 {
   "name": "wewevalidator",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "do some useful validate",
   "main": "weweValidator.js",
   "scripts": {

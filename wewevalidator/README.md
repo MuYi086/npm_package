@@ -63,13 +63,13 @@ const value = weweValidator.verify(temp, 'isVideo')
 const temp = 'mp3'
 const value = weweValidator.verify(temp, 'isAudio')
 
-// isconstter
+// isLetter
 const temp = 'mp3'
-const value = weweValidator.verify(temp, 'isconstter')
+const value = weweValidator.verify(temp, 'isLetter')
 
-// isNumconstter
+// isNumLetter
 const temp = 'mp3'
-const value = weweValidator.verify(temp, 'isNumconstter')
+const value = weweValidator.verify(temp, 'isNumLetter')
 
 // verify length
 const password = 'helloWorld888'
