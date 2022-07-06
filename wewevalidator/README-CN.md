@@ -47,29 +47,33 @@ const value = wewevalidator.verify(url, 'website')
 const taxnum = '259595959529592'
 const value = wewevalidator.verify(taxnum, 'taxnum')
 
-// isNum
+// 数字
 const temp = '259595'
 const value = wewevalidator.verify(temp, 'isNum')
 
-// isImg
+// 图片
 const temp = 'jpg'
 const value = wewevalidator.verify(temp, 'isImg')
 
-// isVideo
+// 视频
 const temp = 'mp4'
 const value = wewevalidator.verify(temp, 'isVideo')
 
-// isAudio
+// 音频
 const temp = 'mp3'
 const value = wewevalidator.verify(temp, 'isAudio')
 
-// isLettter
+// 字母
 const temp = 'mp3'
 const value = wewevalidator.verify(temp, 'isLettter')
 
-// isNumLetter
+// 数字字母
 const temp = 'mp3'
 const value = wewevalidator.verify(temp, 'isNumLetter')
+
+// 汉字
+const temp = '张三'
+const value = wewevalidator.verify(temp, 'isHanzi')
 
 // 校验 长度
 const password = 'helloWorld888'

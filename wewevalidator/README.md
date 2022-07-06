@@ -71,6 +71,10 @@ const value = wewevalidator.verify(temp, 'isLetter')
 const temp = 'mp3'
 const value = wewevalidator.verify(temp, 'isNumLetter')
 
+// isHanzi
+const temp = '张三'
+const value = wewevalidator.verify(temp, 'isHanzi')
+
 // verify length
 const password = 'helloWorld888'
 const limitLength = 10

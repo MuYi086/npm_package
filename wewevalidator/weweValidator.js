@@ -1,9 +1,9 @@
 class WeWeValidator {
   constructor () {
     // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，网址，税号，普通字符串
-    // 判断布尔类型: isNum, isImg, isVideo, isAudio, isLetter, isNumLetter
+    // 判断布尔类型: isNum, isImg, isVideo, isAudio, isLetter, isNumLetter, isHanzi
     // 不是常规的label名称，校验时直接输入label名称即可，例如: verify (value, '地区', limitLength)
-    this.typeArr = ['phone', 'telPhone', 'email', 'password', 'dateTime', 'identityCard', 'website', 'taxnum', 'isNum', 'isImg', 'isVideo', 'isAudio', 'isLetter', 'isNumLetter', 'default']
+    this.typeArr = ['phone', 'telPhone', 'email', 'password', 'dateTime', 'identityCard', 'website', 'taxnum', 'isNum', 'isImg', 'isVideo', 'isAudio', 'isLetter', 'isNumLetter', 'isHanzi', 'default']
     this.typeKeyValue = [
       { key: 'phone', value: '手机号' },
       { key: 'telPhone', value: '座机号' },
@@ -13,12 +13,13 @@ class WeWeValidator {
       { key: 'identityCard', value: '身份证号' },
       { key: 'website', value: '网址' },
       { key: 'taxnum', value: '税号' },
-      { key: 'isNum', value: '是否数字' },
-      { key: 'isImg', value: '是否图片' },
-      { key: 'isVideo', value: '是否视频' },
-      { key: 'isAudio', value: '是否音频' },
-      { key: 'isLetter', value: '是否字母' },
-      { key: 'isNumLetter', value: '是否数字字母' }
+      { key: 'isNum', value: '数字' },
+      { key: 'isImg', value: '图片' },
+      { key: 'isVideo', value: '视频' },
+      { key: 'isAudio', value: '音频' },
+      { key: 'isLetter', value: '字母' },
+      { key: 'isNumLetter', value: '数字字母' },
+      { key: 'isHanzi', value: '汉字' }
     ]
   }
 
@@ -259,6 +260,20 @@ class WeWeValidator {
       case 'isNumLetter':
         if (value) {
           if (/^\w{1,}$/g.test(value)) {
+            result = 1
+            msg = ''
+          } else {
+            result = 0
+            msg = this.autoComplementLabelName(labelName, 2)
+          }
+        } else {
+          result = 0
+          msg = this.autoComplementLabelName(labelName, 1)
+        }
+        break
+      case 'isHanzi':
+        if (value) {
+          if (/^[\u4e00-\u9fa5]+$/g.test(value)) {
             result = 1
             msg = ''
           } else {
