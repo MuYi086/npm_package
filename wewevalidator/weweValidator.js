@@ -198,7 +198,7 @@ class WeWeValidator {
       // 参考:https://www.cnblogs.com/langqq/p/11671785.html
       case 'isImg':
         if (value) {
-          if (/(jpg|jpeg|png|webp|gif|svg|JPG|JPEG|PNG|WEBP|GIF|SVG)$/g.test(value)) {
+          if (/(jpg|jpeg|png|webp|gif|svg|bmp|JPG|JPEG|PNG|WEBP|GIF|SVG|bmp)$/g.test(value)) {
             result = 1
             msg = ''
           } else {
