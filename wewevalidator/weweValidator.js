@@ -99,7 +99,7 @@ class WeWeValidator {
           // 匹配字母
           if (/^[a-zA-Z]+$/g.test(value)) { sum++ }
           // 匹配特殊字符
-          if (/!|@|#|\$|%|\^|&|\*|\(|\)|_|\+|-|=/g.test(value)) { sum++ }
+          if (/(!|@|#|\$|%|\^|&|\*|\(|\)|_|\+|-){1,}/g.test(value)) { sum++ }
           if (sum >= 2) {
             if (!limitLength || value.length <= limitLength) {
               result = 1
