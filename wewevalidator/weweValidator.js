@@ -95,9 +95,9 @@ class WeWeValidator {
         if (value) {
           let sum = 0
           // 匹配数字
-          if (/^[0-9]+$/g.test(value)) { sum++ }
+          if (/[0-9]+/g.test(value)) { sum++ }
           // 匹配字母
-          if (/^[a-zA-Z]+$/g.test(value)) { sum++ }
+          if (/[a-zA-Z]+/g.test(value)) { sum++ }
           // 匹配特殊字符
           if (/(!|@|#|\$|%|\^|&|\*|\(|\)|_|\+|-){1,}/g.test(value)) { sum++ }
           if (sum >= 2) {
