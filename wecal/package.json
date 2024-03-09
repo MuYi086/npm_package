@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ougege/npm_package.git"
+    "url": "git+ssh://git@github.com/MuYi086/npm_package.git"
   },
   "keywords": [
     "calculate",
@@ -16,10 +16,10 @@
     "eval",
     "expression"
   ],
-  "author": "ougege",
+  "author": "MuYi086",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ougege/npm_package/issues"
+    "url": "https://github.com/MuYi086/npm_package/issues"
   },
-  "homepage": "https://github.com/ougege/npm_package#readme"
+  "homepage": "https://github.com/MuYi086/npm_package#readme"
 }

@@ -1,8 +1,8 @@
 ## wecalendar
 
-[中文](https://github.com/ougege/npm_package/blob/master/wecalendar/README-CN.md '中文')
+[中文](https://github.com/MuYi086/npm_package/blob/master/wecalendar/README-CN.md '中文')
 
-![npm](https://img.shields.io/npm/v/wecalendar) ![npm bundle size](https://img.shields.io/bundlephobia/min/wecalendar) ![npm](https://img.shields.io/npm/dt/wecalendar) ![GitHub](https://img.shields.io/github/license/ougege/npm_package)
+![npm](https://img.shields.io/npm/v/wecalendar) ![npm bundle size](https://img.shields.io/bundlephobia/min/wecalendar) ![npm](https://img.shields.io/npm/dt/wecalendar) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
 #### install
 ```SHELL

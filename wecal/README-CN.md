@@ -2,7 +2,7 @@
 
 [English](./README.md 'English')
 
-![npm](https://img.shields.io/npm/v/wecal) ![npm bundle size](https://img.shields.io/bundlephobia/min/wecal) ![npm](https://img.shields.io/npm/dt/wecal) ![GitHub](https://img.shields.io/github/license/ougege/npm_package)
+![npm](https://img.shields.io/npm/v/wecal) ![npm bundle size](https://img.shields.io/bundlephobia/min/wecal) ![npm](https://img.shields.io/npm/dt/wecal) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
 #### 安装
 ```SHELL

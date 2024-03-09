@@ -1,8 +1,8 @@
 ## weimgcompress
 
-[中文](https://github.com/ougege/npm_package/blob/master/weimgcompress/README-CN.md '中文')
+[中文](https://github.com/MuYi086/npm_package/blob/master/weimgcompress/README-CN.md '中文')
 
-![npm](https://img.shields.io/npm/v/weimgcompress) ![npm bundle size](https://img.shields.io/bundlephobia/min/weimgcompress) ![npm](https://img.shields.io/npm/dt/weimgcompress) ![GitHub](https://img.shields.io/github/license/ougege/npm_package)
+![npm](https://img.shields.io/npm/v/weimgcompress) ![npm bundle size](https://img.shields.io/bundlephobia/min/weimgcompress) ![npm](https://img.shields.io/npm/dt/weimgcompress) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
 #### install
 ```SHELL
