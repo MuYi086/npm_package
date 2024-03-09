@@ -1,6 +1,6 @@
 {
   "name": "wecal",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "calculate a string expression",
   "main": "weCal.js",
   "scripts": {

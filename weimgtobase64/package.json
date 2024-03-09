@@ -1,6 +1,6 @@
 {
   "name": "weimgtobase64",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "trans img to base64",
   "main": "weImgToBase64.js",
   "scripts": {
