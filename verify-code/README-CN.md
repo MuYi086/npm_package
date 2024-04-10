@@ -1,28 +1,28 @@
-## weverifycode
+# verify-code
 
 [English](./README.md 'English')
 
-![npm](https://img.shields.io/npm/v/weverifycode) ![npm bundle size](https://img.shields.io/bundlephobia/min/weverifycode) ![npm](https://img.shields.io/npm/dt/weverifycode) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
+![npm](https://img.shields.io/npm/v/@muyi086/verify-code) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/verify-code) ![npm](https://img.shields.io/npm/dt/@muyi086/verify-code) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-#### 安装
+## 安装
 ```SHELL
-npm install weverifycode
+npm install @muyi086/verify-code
 # common JS
-const weverifycode = require('weverifycode')
+const verifyCode = require('@muyi086/verify-code')
 # es6
-import weverifycode from 'weverifycode'
+import verifyCode from '@muyi086/verify-code'
 ```
 
-#### 使用
+## 使用
 ```JS
 // 页面创建一个元素
 <canvas id="canvas"></canvas>
 // 导入和使用
-weverifycode.random(3, 5)
+verifyCode.random(3, 5)
 // 完整方法
 random(type, len, slash = true, point = true)
 ```
-#### 函数
+## 函数
 
 函数名|参数|默认|是否必需|描述|
 --|--|--|--|--|

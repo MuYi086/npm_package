@@ -1,8 +1,8 @@
 {
-  "name": "weverifycode",
-  "version": "1.0.8",
+  "name": "@muyi086/verify-code",
+  "version": "1.0.0",
   "description": "verify code",
-  "main": "weVerifyCode.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

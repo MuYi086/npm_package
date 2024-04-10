@@ -1,4 +1,4 @@
-class WeVerifyCode {
+class VerifyCode {
   constructor () {
     this.numArr = []
     this.letterArrSm = []
@@ -94,5 +94,5 @@ class WeVerifyCode {
   }
 }
 // 使用本class需要页面创建一个canvas,且id为canvas
-let weVerifyCode = new WeVerifyCode()
-module.exports = weVerifyCode
+let verifyCode = new VerifyCode()
+module.exports = verifyCode
