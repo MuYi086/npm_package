@@ -1,44 +1,52 @@
-## NPM_PACKAGE
+# NPM_PACKAGE
+
+
 
 [中文](https://github.com/MuYi086/npm_package/blob/master/README-CN.md '中文')
 
 ![Powered By](https://img.shields.io/badge/Author-MuYi086-yellow) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package) ![GitHub Repo stars](https://img.shields.io/github/stars/MuYi086/npm_package?style=social)
 
-#### Introduction
+## Introduction
 some useful npm packages
 
-#### weCal
+## cal
 Some functions used to replace Eval By calculate expression：Addition, subtraction, multiplication and division of multi-level brackets,negative
 ```
-https://www.npmjs.com/package/wecal
+https://www.npmjs.com/package/@muyi086/cal
 ```
 
-#### weVerifyCode
-random some verifyCodes
+## verify-code
+random some verify Codes
 ```
-https://www.npmjs.com/package/weverifycode
+https://www.npmjs.com/package/@muyi086/verify-code
 ```
 
-#### weCalendar
+## calendar
 calculate one day to the Gregorian calendar and lunar calendar
 ```
-https://www.npmjs.com/package/wecalendar
+https://www.npmjs.com/package/@muyi086/calendar
 ```
 
-#### weImgToBase64
+## img-to-base64
 trans img object or img url to base64
 ```
-https://www.npmjs.com/package/weimgtobase64
+https://www.npmjs.com/package/@muyi086/img-to-base64
 ```
 
-#### weImgCompress
+## img-compress
 compress img by canvas
 ```
-https://www.npmjs.com/package/weimgcompress
+https://www.npmjs.com/package/@muyi086/img-compress
 ```
 
-#### weweValidator
+## validator
 do some useful validator
 ```
-https://www.npmjs.com/package/wewevalidator
+https://www.npmjs.com/package/@muyi086/validator
+```
+
+## git-commit-info
+get some useful commit info
+```
+https://www.npmjs.com/package/@muyi086/git-commit-info
 ```
