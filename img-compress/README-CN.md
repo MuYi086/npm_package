@@ -32,7 +32,7 @@ downloadImg|字符串||必须|保存新图的名称|
 downloadImg|数字|1|可选|介于0和1之间的浮点数|
 
 ## 注意
-在指定图片格式为 image/jpeg 或 image/webp的情况下，可以从 0 到 1 的区间内选择图片的质量
+在指定图片格式为 `image/jpeg` 或 `image/webp`的情况下，可以从 `0` 到 `1` 的区间内选择图片的质量
 
 ## 参考
 1. [HTMLCanvasElement.toDataURL()](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL 'HTMLCanvasElement.toDataURL()')

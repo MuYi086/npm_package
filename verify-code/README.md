@@ -1,6 +1,6 @@
 # verify-code
 
-[中文](https://github.com/MuYi086/npm_package/blob/master/@muyi086/verify-code/README-CN.md '中文')
+[中文](https://github.com/MuYi086/npm_package/blob/master/verify-code/README-CN.md '中文')
 
 ![npm](https://img.shields.io/npm/v/@muyi086/verify-code) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/verify-code) ![npm](https://img.shields.io/npm/dt/@muyi086/verify-code) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 

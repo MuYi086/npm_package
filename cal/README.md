@@ -1,6 +1,6 @@
 # cal
 
-[中文](https://github.com/MuYi086/npm_package/blob/master/@muyi086/cal/README-CN.md '中文')
+[中文](https://github.com/MuYi086/npm_package/blob/master/cal/README-CN.md '中文')
 
 ![npm](https://img.shields.io/npm/v/@muyi086/cal) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/cal) ![npm](https://img.shields.io/npm/dt/@muyi086/cal) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 

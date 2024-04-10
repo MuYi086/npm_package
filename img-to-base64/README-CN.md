@@ -34,7 +34,7 @@ parse|字符串/对象||可选|一个图片对象或图片地址|
 useCanvas|对象||必填|一个图片对象|
 
 ## 注意
-一旦您将未经CORS批准从另一个来源加载的任何数据绘制到画布中，画布就会被污染。受污染的画布不再被认为是安全的，任何从画布检索图像数据的尝试都将导致引发异常。
+一旦您将未经 `CORS` 批准从另一个来源加载的任何数据绘制到画布中，画布就会被污染。受污染的画布不再被认为是安全的，任何从画布检索图像数据的尝试都将导致引发异常。
 
 ## 参考
 1. [Allowing cross-origin use of images and canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image 'Allowing cross-origin use of images and canvas')
