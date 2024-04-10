@@ -1,4 +1,4 @@
-class WeImgToBase64 {
+class ImgToBase64 {
   /**
    * 解析图片url或图片对象
    * 需要注意:未经cors批准加载的数据会导致画布被污染
@@ -33,5 +33,5 @@ class WeImgToBase64 {
     return dataUrl
   }
 }
-const weImgToBase64 = new WeImgToBase64()
-module.exports = weImgToBase64
+const imgToBase64 = new ImgToBase64()
+module.exports = imgToBase64

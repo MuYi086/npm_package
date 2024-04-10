@@ -1,8 +1,9 @@
 {
-  "name": "weimgtobase64",
-  "version": "1.0.5",
+
+  "name": "@muyi086/img-to-base64",
+  "version": "1.0.0",
   "description": "trans img to base64",
-  "main": "weImgToBase64.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +12,7 @@
     "url": "git+ssh://git@github.com/MuYi086/npm_package.git"
   },
   "keywords": [
+    "img",
     "base64"
   ],
   "author": "MuYi086",
