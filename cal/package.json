@@ -1,8 +1,8 @@
 {
-  "name": "wecal",
-  "version": "1.0.8",
+  "name": "@muyi086/cal",
+  "version": "1.0.0",
   "description": "calculate a string expression",
-  "main": "weCal.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

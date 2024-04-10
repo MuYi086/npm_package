@@ -1,4 +1,4 @@
-class WeCal {
+class Cal {
   constructor () {
     this.suitArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
     this.signArr = ['+', '-', '*', '/']
@@ -149,5 +149,5 @@ class WeCal {
     return arr.reduce(function (x, y) { return String(x) + y })
   }
 }
-let weCal = new WeCal()
-module.exports = weCal
+const cal = new Cal()
+module.exports = cal
