@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/verify-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "verify code",
   "main": "index.js",
   "scripts": {

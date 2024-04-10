@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/cal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "calculate a string expression",
   "main": "index.js",
   "scripts": {

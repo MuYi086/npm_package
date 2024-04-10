@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/img-compress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "img compress",
   "main": "index.js",
   "scripts": {
