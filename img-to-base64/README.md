@@ -15,6 +15,7 @@ import imgToBase64 from '@muyi086/img-to-base64'
 
 ## use
 ```JS
+// The address where the network image is located needs to be allowed to cross domains, otherwise the canvas will be contaminated and the canvas.toDataURL will report an error
 // parse img url
 const url = 'http://img.qipeiren.com/UploadFile/UserProPic/2019/11/23/4b65b8aadcfb0ac65a91.jpg'
 console.log(imgToBase64.parse(url))

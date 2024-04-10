@@ -15,6 +15,7 @@ import imgToBase64 from '@muyi086/img-to-base64'
 
 ## 使用
 ```JS
+// 网络图片的所在地址需要允许跨域，否则画布被污染, canvas.toDataURL会报错
 // parse 图片 url
 const url = 'http://img.qipeiren.com/UploadFile/UserProPic/2019/11/23/4b65b8aadcfb0ac65a91.jpg'
 console.log(imgToBase64.parse(url))
