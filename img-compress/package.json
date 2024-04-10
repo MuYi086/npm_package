@@ -1,8 +1,8 @@
 {
-  "name": "weimgcompress",
-  "version": "1.0.4",
+  "name": "@muyi086/img-compress",
+  "version": "1.0.0",
   "description": "img compress",
-  "main": "weImgCompress.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

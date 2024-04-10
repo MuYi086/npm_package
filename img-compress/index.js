@@ -1,4 +1,4 @@
-class WeImgCompress {
+class ImgCompress {
   compress (imgObj, quality = 1) {
     const canvas = document.createElement('canvas')
     canvas.width = imgObj.width
@@ -19,5 +19,5 @@ class WeImgCompress {
     aa.click()
   }
 }
-const weImgCompress = new WeImgCompress()
-module.exports = weImgCompress
+const imgCompress = new ImgCompress()
+module.exports = imgCompress
