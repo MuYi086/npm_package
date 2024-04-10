@@ -59,7 +59,12 @@ class VerifyCode {
   }
   // 用canvas画图
   drawImg (codeArr) {
-    let canvas = document.getElementById('canvas')
+    let canvas
+    if (uni) {
+      canvas = document.querySelector('#canvas canvas')
+    } else {
+      canvas = document.querySelector('#canvas')
+    }
     let width = this.options.width
     let height = this.options.height
     let content = canvas.getContext('2d')
