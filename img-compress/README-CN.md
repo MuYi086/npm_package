@@ -15,6 +15,7 @@ import imgCompress from '@muyi086/img-compress'
 
 ## 使用
 ```JS
+// 网络图片的所在地址需要允许跨域，否则画布被污染, canvas.toDataURL会报错
 // 压缩图片,返回base64
 console.log(imgCompress.compress(imgObj, quality))
 // 下载已压缩的图片

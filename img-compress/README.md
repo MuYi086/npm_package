@@ -15,6 +15,7 @@ import imgCompress from '@muyi086/img-compress'
 
 ## use
 ```JS
+// The address where the network image is located needs to be allowed to cross domains, otherwise the canvas will be contaminated and the canvas.toDataURL will report an error
 // compress img, return base64
 console.log(imgCompress.compress(imgObj, quality))
 // download compressed img
