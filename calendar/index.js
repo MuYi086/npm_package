@@ -1,4 +1,4 @@
-class WeCanlendar {
+class Calendar {
   constructor () {
     this.yearArr = []
     this.monthArr = []
@@ -235,5 +235,5 @@ class WeCanlendar {
     return currentMonthFarmDay
   }
 }
-let weCanlendar = new WeCanlendar()
-module.exports = weCanlendar
+const calendar = new Calendar()
+module.exports = calendar

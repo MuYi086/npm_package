@@ -1,8 +1,8 @@
 {
-  "name": "wecalendar",
-  "version": "1.1.3",
-  "description": "canlendar with Gregorian and lunar",
-  "main": "weCalendar.js",
+  "name": "@muyi086/calendar",
+  "version": "1.0.0",
+  "description": "calendar and Lunar calendar",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +11,8 @@
     "url": "git+ssh://git@github.com/MuYi086/npm_package.git"
   },
   "keywords": [
-    "Gregorian",
     "calendar",
-    "Lunar"
+    "Lunar calendar"
   ],
   "author": "MuYi086",
   "license": "ISC",
