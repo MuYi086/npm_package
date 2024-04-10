@@ -6,7 +6,7 @@
 
 ## install
 ```SHELL
-npm install wecanlendar
+npm install @muyi086/calendar
 # common JS
 const calendar = require('@muyi086/calendar')
 # es6
