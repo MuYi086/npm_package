@@ -1,4 +1,4 @@
-class WeWeValidator {
+class Validator {
   constructor () {
     // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，网址，税号，普通字符串
     // 判断布尔类型: isNum, isImg, isVideo, isAudio, isLetter, isNumLetter, isHanzi
@@ -324,5 +324,5 @@ class WeWeValidator {
     return value
   }
 }
-const weweValidator = new WeWeValidator()
-module.exports = weweValidator
+const validator = new Validator()
+module.exports = validator
