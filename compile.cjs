@@ -9,7 +9,9 @@ const directoryArr = [
   'img-compress',
   'img-to-base64',
   'validator',
-  'verify-code'
+  'verify-code',
+  'var-type',
+  'qs',
 ]
 console.log(chalk.blue('开始压缩代码'))
 

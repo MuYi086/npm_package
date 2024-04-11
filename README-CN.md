@@ -54,3 +54,15 @@ https://www.npmjs.com/package/@muyi086/git-commit-info
 ```
 https://www.npmjs.com/package/@muyi086/git-commit-export-html
 ```
+
+## var-type
+`js` 变量类型判断
+```
+https://www.npmjs.com/package/@muyi086/var-type
+```
+
+## qs
+原生 `JS` 实现 `qs.stringify` 和 `qs.parse`
+```
+https://www.npmjs.com/package/@muyi086/qs
+```

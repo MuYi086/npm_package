@@ -56,3 +56,15 @@ Find the user's commit records within a time frame, and generate corresponding `
 ```
 https://www.npmjs.com/package/@muyi086/git-commit-export-html
 ```
+
+## var-type
+JS variable type checking
+```
+https://www.npmjs.com/package/@muyi086/var-type
+```
+
+## qs
+Implementing qs.Stringify and qs.Parse in native JavaScript
+```
+https://www.npmjs.com/package/@muyi086/qs
+```
