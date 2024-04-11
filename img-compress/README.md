@@ -14,8 +14,10 @@ import imgCompress from '@muyi086/img-compress'
 ```
 
 ## use
+Currently only supports pc, mobile framework uniapp and others will hijack canvas related functions, causing unable to create the native canvas of the browser.
+
 ```JS
-// The address where the network image is located needs to be allowed to cross domains, otherwise the canvas will be contaminated and the canvas.toDataURL will report an error
+// Data loaded without CORS approval will cause the canvas to be polluted, and the canvas.toDataURL will report an error
 // compress img, return base64
 console.log(imgCompress.compress(imgObj, quality))
 // download compressed img

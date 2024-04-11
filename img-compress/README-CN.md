@@ -14,8 +14,10 @@ import imgCompress from '@muyi086/img-compress'
 ```
 
 ## 使用
+目前仅支持 `pc` ,移动端框架`uniapp` 等会劫持 `canvas` 相关函数,导致无法创建浏览器原生的 `canvas`
+
 ```JS
-// 网络图片的所在地址需要允许跨域，否则画布被污染, canvas.toDataURL会报错
+// 未经cors批准加载的数据会导致画布被污染, canvas.toDataURL会报错
 // 压缩图片,返回base64
 console.log(imgCompress.compress(imgObj, quality))
 // 下载已压缩的图片
