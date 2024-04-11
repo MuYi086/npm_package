@@ -54,7 +54,10 @@ const getGitEmail = () => {
 const getGitShowRefTags = () => {
   const statement = 'git show-ref --tags'
   const showRefTags = commonExecGitStatement(statement)
-  const tagsArr = showRefTags.match(/refs\/tags\/.+/ig)
+  let tagsArr = []
+  if (showRefTags) {
+    tagsArr = showRefTags.match(/refs\/tags\/.+/ig)
+  }
   return tagsArr
 }
 
@@ -63,9 +66,13 @@ const getGitShowRefTags = () => {
  * @param {*} arr
  * @returns string
  */
-const getLatestTagFromTagsArr = (arr) => {
-  const latestTag = arr[arr.length - 1]
-  return latestTag.replace('refs/tags/', '')
+const getLatestTagFromTagsArr = (arr = []) => {
+  if (arr) {
+    const latestTag = arr[arr.length - 1]
+    return latestTag.replace('refs/tags/', '')
+  } else {
+    return ''
+  }
 }
 
 /**
