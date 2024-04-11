@@ -1,5 +1,5 @@
 {
-  "name": "@muyi086/var-type",
+  "name": "@muyi086/qs",
   "version": "1.0.0",
   "description": "Implementing qs.Stringify and qs.Parse in native JavaScript",
   "main": "index.min.js",
@@ -12,12 +12,11 @@
   },
   "keywords": [
     "qs.Stringify",
+    "stringify",
     "qs.Parse",
-    "JavaScript",
+    "parse",
     "native",
-    "type",
-    "var",
-    "typeof"
+    "JavaScript"
   ],
   "author": "MuYi086",
   "license": "MIT",
