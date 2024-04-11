@@ -1,0 +1,27 @@
+{
+  "name": "@muyi086/var-type",
+  "version": "1.0.0",
+  "description": "JS variable type checking",
+  "main": "index.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MuYi086/npm_package.git"
+  },
+  "keywords": [
+    "typeof",
+    "variable",
+    "JavaScript",
+    "type",
+    "var",
+    "checking"
+  ],
+  "author": "MuYi086",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuYi086/npm_package/issues"
+  },
+  "homepage": "https://github.com/MuYi086/npm_package#readme"
+}
