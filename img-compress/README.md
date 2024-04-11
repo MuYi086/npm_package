@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/@muyi086/img-compress) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/img-compress) ![npm](https://img.shields.io/npm/dt/@muyi086/img-compress) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-## install
+## Install
 ```SHELL
 npm install @muyi086/img-compress
 # common JS
@@ -13,7 +13,7 @@ const imgCompress = require('@muyi086/img-compress')
 import imgCompress from '@muyi086/img-compress'
 ```
 
-## use
+## Use
 Currently only supports pc, mobile framework uniapp and others will hijack canvas related functions, causing unable to create the native canvas of the browser.
 
 ```JS
@@ -24,7 +24,7 @@ console.log(imgCompress.compress(imgObj, quality))
 console.log(imgCompress.downloadImg(imgObj, name, quality))
 ```
 
-## function
+## Function
 
 function|parameter|default|required|description|
 --|--|--|--|--|
@@ -35,8 +35,8 @@ downloadImg|string||required|name for save new img|
 downloadImg|number|1|optional|a float between 0 and 1|
 
 
-## tips
+## Tips
 A Number between `0` and `1` indicating the image quality to use for image formats that use lossy compression such as `image/jpeg` and `image/webp` .
 
-## wiki
+## Wiki
 1. [HTMLCanvasElement.toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL 'HTMLCanvasElement.toDataURL()')

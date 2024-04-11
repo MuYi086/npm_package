@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/@muyi086/calendar) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/calendar) ![npm](https://img.shields.io/npm/dt/@muyi086/calendar) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-## install
+## Install
 ```SHELL
 npm install @muyi086/calendar
 # common JS
@@ -13,17 +13,17 @@ const calendar = require('@muyi086/calendar')
 import calendar from '@muyi086/calendar'
 ```
 
-## use
+## Use
 ```JS
 // all data is in object @muyi086/calendar after init
 console.log(calendar)
 ```
 
-## attr explain
+## Attr explain
 1. `currentMonthDay` : daily info 
 1. `currentMonthFarmDay` : daily info with Lunar
 
-## function
+## Function
 
 function|parameter|default|required|description|
 --|--|--|--|--|

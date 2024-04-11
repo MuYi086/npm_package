@@ -4,14 +4,14 @@
 
 ![npm](https://img.shields.io/npm/v/@muyi086/git-commit-export-html) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/git-commit-export-html) ![npm](https://img.shields.io/npm/dt/@muyi086/git-commit-export-html) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-## install
+## Install
 ```SHELL
 npm install @muyi086/git-commit-export-html
 # common JS
 const gitCommitExportHtml = require('@muyi086/git-commit-export-html')
 ```
 
-## use
+## Use
 
 ```JS
 const options = {

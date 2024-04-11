@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/@muyi086/validator) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/validator) ![npm](https://img.shields.io/npm/dt/@muyi086/validator) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-## install
+## Install
 ```SHELL
 npm install @muyi086/validator
 # common JS
@@ -13,7 +13,7 @@ const validator = require('@muyi086/validator')
 import validator from '@muyi086/validator'
 ```
 
-## use
+## Use
 ```JS
 // phone
 const phone = '15507810249'
@@ -86,11 +86,11 @@ const address = '杭州市'
 const value = @validator.verify(address, '地区')
 ```
 
-## attr explain
+## Attr explain
 1. `typeArr` : verify attr array 
 1. `typeKeyValue` : verify attr key and value
 
-## function
+## Function
 
 function|parameter|default|required|description|
 --|--|--|--|--|

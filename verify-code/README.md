@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/@muyi086/verify-code) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/verify-code) ![npm](https://img.shields.io/npm/dt/@muyi086/verify-code) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-## install
+## Install
 ```SHELL
 npm install @muyi086/verify-code
 # common JS
@@ -13,7 +13,7 @@ const verifyCode = require('@muyi086/verify-code')
 import verifyCode from '@muyi086/verify-code'
 ```
 
-## use
+## Use
 ```JS
 // dom create
 <canvas id="canvas"></canvas>
@@ -23,7 +23,7 @@ verifyCode.random(3, 5)
 random(type, len, slash = true, point = true)
 ```
 
-## function
+## Function
 
 function|parameter|default|required|description|
 --|--|--|--|--|

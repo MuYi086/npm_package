@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/@muyi086/git-commit-info) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/git-commit-info) ![npm](https://img.shields.io/npm/dt/@muyi086/git-commit-info) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-## install
+## Install
 ```SHELL
 npm install @muyi086/git-commit-info
 # common JS
@@ -13,7 +13,7 @@ const gitCommitInfo = require('@muyi086/git-commit-info')
 import gitCommitInfo from '@muyi086/git-commit-info'
 ```
 
-## use
+## Use
 ```JS
 const { 
   branch,

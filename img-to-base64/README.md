@@ -4,7 +4,7 @@
 
 ![npm](https://img.shields.io/npm/v/@muyi086/img-to-base64) ![npm bundle size](https://img.shields.io/bundlephobia/min/@muyi086/img-to-base64) ![npm](https://img.shields.io/npm/dt/@muyi086/img-to-base64) ![GitHub](https://img.shields.io/github/license/MuYi086/npm_package)
 
-## install
+## Install
 ```SHELL
 npm install @muyi086/img-to-base64
 # common JS
@@ -13,7 +13,7 @@ const imgToBase64 = require('@muyi086/img-to-base64')
 import imgToBase64 from '@muyi086/img-to-base64'
 ```
 
-## use
+## Use
 Currently only supports pc, mobile framework uniapp and others will hijack canvas related functions, causing unable to create the native canvas of the browser.
 
 ```JS
@@ -29,7 +29,7 @@ const img = document.getElementById('test')
 console.log(imgToBase64.useCanvas(img))
 ```
 
-## function
+## Function
 
 function|parameter|default|required|description|
 --|--|--|--|--|
@@ -37,8 +37,8 @@ parse|string/object||optional|a img object or img url|
 useCanvas|object||required|a img object|
 
 
-## tips
+## Tips
 As soon as you draw into a canvas any data that was loaded from another origin without `CORS` approval, the canvas becomes tainted.A tainted canvas is one which is no longer considered secure, and any attempts to retrieve image data back from the canvas will cause an exception to be thrown.
 
-## wiki
+## Wiki
 1. [Allowing cross-origin use of images and canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image 'Allowing cross-origin use of images and canvas')
