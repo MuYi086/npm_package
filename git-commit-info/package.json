@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/git-commit-info",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "get commit info",
   "main": "index.min.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "latestTag"
   ],
   "author": "MuYi086",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },

@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/calendar",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "calendar and Lunar calendar",
   "main": "index.min.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "Lunar calendar"
   ],
   "author": "MuYi086",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },

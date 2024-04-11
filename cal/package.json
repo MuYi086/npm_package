@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/cal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "calculate a string expression",
   "main": "index.min.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "expression"
   ],
   "author": "MuYi086",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },

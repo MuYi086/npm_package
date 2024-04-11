@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/verify-code",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "random some verify Codes",
   "main": "index.min.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "point"
   ],
   "author": "MuYi086",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },

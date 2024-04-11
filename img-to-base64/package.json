@@ -1,7 +1,7 @@
 {
 
   "name": "@muyi086/img-to-base64",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "trans img to base64",
   "main": "index.min.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "base64"
   ],
   "author": "MuYi086",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },

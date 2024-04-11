@@ -19,7 +19,7 @@
     "chalk": "^4.1.2"
   },
   "author": "MuYi086",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },
