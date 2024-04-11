@@ -1,3 +1,10 @@
+/**
+ * @Description: trans img to base64
+ * @Author: MuYi086
+ * @Email: 1258947325@qq.com
+ * @Blog: https://github.com/MuYi086/npm_package
+ * @Date: 2021/04/11 08:50
+ */
 class ImgToBase64 {
   /**
    * 解析图片url或图片对象

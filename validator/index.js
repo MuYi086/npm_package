@@ -1,3 +1,10 @@
+/**
+ * @Description: do some useful validate
+ * @Author: MuYi086
+ * @Email: 1258947325@qq.com
+ * @Blog: https://github.com/MuYi086/npm_package
+ * @Date: 2021/04/11 08:50
+ */
 class Validator {
   constructor () {
     // 常用的校验类型: 手机，座机，邮箱，密码，日期，身份证，网址，税号，普通字符串

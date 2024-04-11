@@ -1,3 +1,10 @@
+/**
+ * @Description: calculate a string expression
+ * @Author: MuYi086
+ * @Email: 1258947325@qq.com
+ * @Blog: https://github.com/MuYi086/npm_package
+ * @Date: 2021/04/11 08:50
+ */
 class Cal {
   constructor () {
     this.suitArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']

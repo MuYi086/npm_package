@@ -1,7 +1,7 @@
 {
   "name": "@muyi086/git-commit-info",
-  "version": "1.0.2",
-  "description": "get commint info",
+  "version": "1.0.3",
+  "description": "get commit info",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
