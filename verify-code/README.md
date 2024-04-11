@@ -20,14 +20,11 @@ import verifyCode from '@muyi086/verify-code'
 // import and use
 verifyCode.random(3, 5)
 // full code
+/**
+ * @param {number} type 1: number;2: letter;3: number + letter 
+ * @param {number} len verify code length
+ * @param {boolean} slash show slash
+ * @param {boolean} point show point
+ */
 random(type, len, slash = true, point = true)
 ```
-
-## Function
-
-function|parameter|default|required|description|
---|--|--|--|--|
-random|type|number|required|code type mix (1: number;2: letter;3: number and letter)|
-random|len|number|required|code length|
-random|slash|Boolean true|optional|has slash|
-random|point|Boolean true|optional|has point|

@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/verify-code",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "random some verify Codes",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,9 @@
   "keywords": [
     "random",
     "verify",
-    "code"
+    "code",
+    "slash",
+    "point"
   ],
   "author": "MuYi086",
   "license": "ISC",
