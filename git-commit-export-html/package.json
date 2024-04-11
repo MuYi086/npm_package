@@ -1,0 +1,32 @@
+{
+  "name": "@muyi086/git-commit-export-html",
+  "version": "1.0.0",
+  "description": "Find the commit records of a user for a specific time period, and generate corresponding HTML and JSON files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MuYi086/npm_package.git"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "export",
+    "html",
+    "json",
+    "fs",
+    "path"
+  ],
+  "dependencies": {
+    "gitlog": "^4.0.8",
+    "@muyi086/git-commit-info": "^1.0.4"
+  },
+  "author": "MuYi086",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuYi086/npm_package/issues"
+  },
+  "homepage": "https://github.com/MuYi086/npm_package#readme"
+}
