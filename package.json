@@ -15,7 +15,8 @@
     "package"
   ],
   "dependencies": {
-    "terser": "^5.30.3"
+    "terser": "^5.30.3",
+    "chalk": "^4.1.2"
   },
   "author": "MuYi086",
   "license": "ISC",
