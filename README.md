@@ -50,3 +50,9 @@ get some useful commit info
 ```
 https://www.npmjs.com/package/@muyi086/git-commit-info
 ```
+
+## git-commit-export-html
+Find the user's commit records within a time frame, and generate corresponding `html` and `json` files
+```
+https://www.npmjs.com/package/@muyi086/git-commit-export-html
+```

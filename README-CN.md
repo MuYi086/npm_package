@@ -48,3 +48,9 @@ https://www.npmjs.com/package/@muyi086/validator
 ```
 https://www.npmjs.com/package/@muyi086/git-commit-info
 ```
+
+## git-commit-export-html
+找到用户一个时间段的提交记录，生成对应的 `html` 和 `json` 文件
+```
+https://www.npmjs.com/package/@muyi086/git-commit-export-html
+```
