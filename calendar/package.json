@@ -1,8 +1,8 @@
 {
   "name": "@muyi086/calendar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "calendar and Lunar calendar",
-  "main": "index.js",
+  "main": "index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

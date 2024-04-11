@@ -1,8 +1,8 @@
 {
   "name": "@muyi086/git-commit-export-html",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Find the commit records of a user for a specific time period, and generate corresponding HTML and JSON files",
-  "main": "index.js",
+  "main": "index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

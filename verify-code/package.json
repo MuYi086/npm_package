@@ -1,8 +1,8 @@
 {
   "name": "@muyi086/verify-code",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "random some verify Codes",
-  "main": "index.js",
+  "main": "index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

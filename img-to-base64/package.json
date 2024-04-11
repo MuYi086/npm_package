@@ -1,9 +1,9 @@
 {
 
   "name": "@muyi086/img-to-base64",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "trans img to base64",
-  "main": "index.js",
+  "main": "index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
