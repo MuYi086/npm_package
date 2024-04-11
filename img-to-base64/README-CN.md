@@ -14,8 +14,10 @@ import imgToBase64 from '@muyi086/img-to-base64'
 ```
 
 ## 使用
+目前仅支持 `pc` ,移动端框架`uniapp` 等会劫持 `canvas` 相关函数,导致无法创建浏览器原生的 `canvas`
+
 ```JS
-// 网络图片的所在地址需要允许跨域，否则画布被污染, canvas.toDataURL会报错
+// 未经cors批准加载的数据会导致画布被污染, canvas.toDataURL会报错
 // parse 图片 url
 const url = 'http://img.qipeiren.com/UploadFile/UserProPic/2019/11/23/4b65b8aadcfb0ac65a91.jpg'
 console.log(imgToBase64.parse(url))

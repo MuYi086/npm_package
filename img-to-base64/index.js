@@ -30,14 +30,18 @@ class ImgToBase64 {
   }
 
   useCanvas (imgObj) {
-    const canvas = document.createElement('canvas')
-    canvas.width = imgObj.width
-    canvas.height = imgObj.height
-    const ctx = canvas.getContext('2d')
-    ctx.drawImage(imgObj, 0, 0, imgObj.width, imgObj.height)
-    const dataUrl = canvas.toDataURL('image/png')
-    console.log(dataUrl)
-    return dataUrl
+    if (uni) {
+      return new Error('暂不支持uniapp')
+    } else {
+      const canvas = document.createElement('canvas')
+      canvas.width = imgObj.width
+      canvas.height = imgObj.height
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(imgObj, 0, 0, imgObj.width, imgObj.height)
+      const dataUrl = canvas.toDataURL('image/png')
+      console.log(dataUrl)
+      return dataUrl
+    }
   }
 }
 const imgToBase64 = new ImgToBase64()
