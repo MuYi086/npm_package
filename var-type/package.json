@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/var-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JS variable type checking",
   "main": "index.min.js",
   "scripts": {

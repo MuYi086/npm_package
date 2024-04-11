@@ -2,7 +2,7 @@
  * @Description: img compress
  * @Author: MuYi086
  * @Email: 1258947325@qq.com
- * @Blog: https://github.com/MuYi086/npm_package
+ * @Blog: https://github.com/MuYi086/blog
  * @Date: 2021/04/11 08:50
  */
 class ImgCompress {
