@@ -55,7 +55,8 @@ const getGitShowRefTags = () => {
   const statement = 'git show-ref --tags'
   const showRefTags = commonExecGitStatement(statement)
   let tagsArr = []
-  if (showRefTags) {
+  // 带tag标记必然是字符串,否则是throw 的Error对象
+  if (showRefTags && typeof showRefTags === 'string') {
     tagsArr = showRefTags.match(/refs\/tags\/.+/ig)
   }
   return tagsArr
