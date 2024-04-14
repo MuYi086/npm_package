@@ -1,0 +1,26 @@
+{
+  "name": "chrome-extension-music163-download",
+  "version": "1.0.0",
+  "description": "下载网易云音乐对应歌单的歌曲",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MuYi086/npm_package.git"
+  },
+  "keywords": [
+    "chrome extension",
+    "NetEase",
+    "music",
+    "download",
+    "playlist"
+  ],
+  "author": "MuYi086",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuYi086/npm_package/issues"
+  },
+  "homepage": "https://github.com/MuYi086/npm_package#readme"
+}
