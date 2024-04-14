@@ -76,3 +76,9 @@ record of learning quant, and try
 ```
 https://www.npmjs.com/package/@muyi086/quant-learn
 ```
+
+## chrome-extension-music163-fetch
+download music with  music163's playlist
+```
+https://www.npmjs.com/package/chrome-extension-music163-fetch
+```

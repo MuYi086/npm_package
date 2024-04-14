@@ -74,3 +74,9 @@ https://www.npmjs.com/package/@muyi086/qs
 ```
 https://www.npmjs.com/package/@muyi086/quant-learn
 ```
+
+## chrome-extension-music163-fetch
+下载网易云音乐对应歌单的歌曲
+```
+https://www.npmjs.com/package/chrome-extension-music163-fetch
+```
