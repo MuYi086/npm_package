@@ -1,4 +1,7 @@
-# chrome-extension-music163-download
+# chrome-extension-music163-fetch
+
+## 名称说明
+`npmjs` 规定名称不能带有 `download`,所以用 `fetch`替换
 
 ## 介绍
 下载网易云音乐对应歌单的歌曲
