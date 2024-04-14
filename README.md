@@ -70,3 +70,9 @@ Implementing qs.Stringify and qs.Parse in native JavaScript
 ```
 https://www.npmjs.com/package/@muyi086/qs
 ```
+
+## quant-learn
+record of learning quant, and try
+```
+https://www.npmjs.com/package/@muyi086/quant-learn
+```

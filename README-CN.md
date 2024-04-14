@@ -68,3 +68,9 @@ https://www.npmjs.com/package/@muyi086/var-type
 ```
 https://www.npmjs.com/package/@muyi086/qs
 ```
+
+## quant-learn
+学习量化的记录和尝试
+```
+https://www.npmjs.com/package/@muyi086/quant-learn
+```
