@@ -1,0 +1,27 @@
+{
+  "name": "@muyi086/chrome-extension-interface-url-copy",
+  "version": "1.0.0",
+  "description": "render interface name, opy name and url",
+  "main": "index.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MuYi086/npm_package.git"
+  },
+  "keywords": [
+    "chrome extension",
+    "interface",
+    "render name",
+    "copy name",
+    "copy url",
+    "apiPost"
+  ],
+  "author": "MuYi086",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuYi086/npm_package/issues"
+  },
+  "homepage": "https://github.com/MuYi086/npm_package#readme"
+}
