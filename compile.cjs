@@ -4,14 +4,16 @@ const chalk = require('chalk')
 const directoryArr = [
   'cal', 
   'calendar', 
-  'git-commit-export-html', 
+  'chrome-extension-interface-url-copy',
+  'chrome-extension-music163-fetch',
+  'git-commit-export-html',
   'git-commit-info', 
   'img-compress',
   'img-to-base64',
-  'validator',
-  'verify-code',
-  'var-type',
   'qs',
+  'validator',
+  'var-type',
+  'verify-code'
 ]
 console.log(chalk.blue('开始压缩代码'))
 

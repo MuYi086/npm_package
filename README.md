@@ -82,3 +82,9 @@ download music with  music163's playlist
 ```
 https://www.npmjs.com/package/chrome-extension-music163-fetch
 ```
+
+## chrome-extension-interface-url-copy
+render interface name and copy url
+```
+https://www.npmjs.com/package/@muyi086/chrome-extension-interface-url-copy
+```

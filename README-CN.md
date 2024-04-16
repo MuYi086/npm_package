@@ -80,3 +80,9 @@ https://www.npmjs.com/package/@muyi086/quant-learn
 ```
 https://www.npmjs.com/package/chrome-extension-music163-fetch
 ```
+
+## chrome-extension-interface-url-copy
+接口名称生成和地址复制
+```
+https://www.npmjs.com/package/@muyi086/chrome-extension-interface-url-copy
+```
