@@ -73,4 +73,13 @@ varType.isWeakMap(a)
 
 // 是否WeakSet
 varType.isWeakSet(a)
+
+// 是否Buffer
+varType.isBuffer(a)
+
+// 是否isStream
+varType.isStream(a)
+
+// 是否isProxy
+varType.isProxy(a)
 ```
