@@ -68,7 +68,7 @@ const getGitShowRefTags = () => {
  * @returns string
  */
 const getLatestTagFromTagsArr = (arr = []) => {
-  if (arr) {
+  if (arr && arr.length > 0) {
     const latestTag = arr[arr.length - 1]
     return latestTag.replace('refs/tags/', '')
   } else {
