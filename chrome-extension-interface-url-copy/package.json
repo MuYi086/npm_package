@@ -1,7 +1,7 @@
 {
   "name": "@muyi086/chrome-extension-interface-url-copy",
-  "version": "1.0.0",
-  "description": "render interface name, opy name and url",
+  "version": "1.0.1",
+  "description": "render interface name, copy name and url",
   "main": "index.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

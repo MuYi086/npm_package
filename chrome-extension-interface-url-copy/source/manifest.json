@@ -1,46 +1,26 @@
 {
   "manifest_version":2,
-  "name":"网易云音乐歌单下载",
-  "description":"网易云音乐歌单下载",
-  "version":"0.0.1",
+  "name":"api接口取名",
+  "description":"render interface name, opy name and url",
+  "version":"1.0.1",
   "icons":{
-    "16":"icon.png",
-    "48":"icon48.png",
-    "128":"icon128.png"
+    "16":"img/icon16.png",
+    "48":"img/icon48.png",
+    "128":"img/icon128.png"
   },
   "browser_action":{
-    "default_icon":"icon.png",
-    "default_title":""
+    "default_icon":{
+      "16":"img/icon16.png",
+      "48":"img/icon48.png",
+      "128":"img/icon128.png"
+    },
+    "default_title":"api接口取名"
   },
-  "externally_connectable": {
-    "matches": [
-      "http://*.music.126.net/*",
-      "https://*.music.126.net/*",
-      "http://music.163.com/*",
-      "https://music.163.com/*"
-    ]
-  },
-  "permissions":[
-    "tabs",
-    "http://*.music.126.net/*",
-    "https://*.music.126.net/*",
-    "http://music.163.com/*",
-    "https://music.163.com/*"
-  ],
+  "background":{},
+  "permissions":["tabs","http://*/*"],
   "content_scripts":[{
-    "matches":[
-      "http://*.music.126.net/*",
-      "https://*.music.126.net/*",
-      "http://music.163.com/*",
-      "https://music.163.com/*"
-    ],
-    "js":[
-      "netease/eventEmitter.js",
-      "axios.min.js",
-      "qs.min.js",
-      "jquery.js",
-      "content_script.js",
-      "netease/core.js"
-    ]
+    "css": ["css/bootstrap.min.css", "css/custom.css"],
+    "matches":["https://console-docs.apipost.cn/*"],
+    "js":["js/jquery.js","js/content_script.js", "js/bootstrap.min.js"]
   }]
 }

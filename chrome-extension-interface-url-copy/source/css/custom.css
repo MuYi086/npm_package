@@ -1,0 +1,11 @@
+.exten-wrap {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  width: 300px;
+  height: 300px;
+}
+.panel-body .well {
+  word-wrap: break-word;
+  white-space: normal;
+}
