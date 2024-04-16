@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension-music163-fetch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "download music with  music163's playlist",
   "main": "index.js",
   "scripts": {
