@@ -13,7 +13,8 @@ const gitCommitInfo = require('@muyi086/git-commit-info')
 
 ## Use
 ```JS
-const { 
+const {
+  projectName,
   branch,
   gitUserName,
   gitUserEmail,
@@ -24,6 +25,6 @@ const {
   commitHash,
   latestTag
 } = gitCommitInfo()
-// branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubject, commitHash, latestTag
-console.log(branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubject, commitHash, latestTag)
+// projectName, branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubject, commitHash, latestTag
+console.log(projectName, branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubject, commitHash, latestTag)
 ```

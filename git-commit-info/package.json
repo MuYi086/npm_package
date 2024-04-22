@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/git-commit-info",
-  "version": "1.0.11",
+  "version": "1.0.13",
   "description": "get commit info",
   "main": "index.min.js",
   "scripts": {

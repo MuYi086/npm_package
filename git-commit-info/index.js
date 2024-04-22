@@ -77,6 +77,23 @@ const getLatestTagFromTagsArr = (arr = []) => {
 }
 
 /**
+ * 获取远程项目名
+ * @returns string
+ */
+const getOriginProjectName = () => {
+  let projectName = ''
+  const statement = 'git remote -v'
+  const originUrl = commonExecGitStatement(statement)
+  if (originUrl && originUrl.includes('push')) {
+    // 俩个地址: 一个fetch，一个push
+    const dirArr = originUrl.match(/\/.*\.git/g)
+    // 替换/和.git为空
+    projectName = dirArr[1].replace('/', '').replace('.git', '')
+  }
+  return projectName
+}
+
+/**
  * 获取上一次commit信息
  * @returns object
  */
@@ -99,6 +116,7 @@ const getGitLastCommitInfo = () => {
  * @returns object
  */
 const gitCommitInfo = () => {
+  const projectName = getOriginProjectName()
   const branch = getGitBranch()
   const name = getGitName()
   const email = getGitEmail()
@@ -106,6 +124,7 @@ const gitCommitInfo = () => {
   const showRefTags = getGitShowRefTags()
   const latestTag = getLatestTagFromTagsArr(showRefTags)
   return {
+    projectName,
     branch,
     gitUserName: name,
     gitUserEmail: email,
