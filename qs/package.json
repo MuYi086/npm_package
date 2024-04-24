@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/qs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Implementing qs.Stringify and qs.Parse in native JavaScript",
   "main": "index.min.js",
   "scripts": {

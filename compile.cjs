@@ -22,7 +22,7 @@ const pArr = directoryArr.map((li) => {
   return new Promise((resolve, reject) => {
     try {
       const code = fs.readFileSync(`${directory}/index.js`, 'utf8')
-      minify(code).then(result => {
+      minify(code, { mangle: { toplevel: true } }).then(result => {
         fs.writeFileSync(`${directory}/index.min.js`, result.code, 'utf8')
         console.log(chalk.blue(`${li}目录处理完成`))
         resolve()

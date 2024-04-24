@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/validator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "do some useful validate",
   "main": "index.min.js",
   "scripts": {
