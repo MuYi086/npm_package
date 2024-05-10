@@ -55,52 +55,42 @@ class VarType {
    * @param {*} val
    * @returns boolean
    */
-  isProxy (val) {
-    /**
-     * 判断是否其他类型
-     * @param {*} o 
-     * @returns boolean
-     */
-    function shouldBeCloneable (o) {
-      const type = typeof o
-      return (
-        o?.constructor === ({}).constructor ||
-        type === 'undefined' ||
-        o === null ||
-        type === 'boolean' ||
-        type === 'number' ||
-        type === 'string' ||
-        o instanceof Date ||
-        o instanceof RegExp ||
-        o instanceof Blob ||
-        o instanceof File ||
-        o instanceof FileList ||
-        o instanceof ArrayBuffer ||
-        o instanceof ImageData ||
-        o instanceof ImageBitmap ||
-        o instanceof Array ||
-        o instanceof Map ||
-        o instanceof Set
-      )
-    }
-    /**
-     * 判断是否能被clone
-     * @param {*} val 
-     * @returns boolean
-     */
-    function isCloneable (val) {
-      try {
-        postMessage(val, '*')
-      } catch (error) {
-        // 错误码25表示不能被clone
-        if (error?.code === 25) return false
-      }
-      return true
-    }
-    const _shouldBeCloneable = shouldBeCloneable(val)
-    const _isCloneable = isCloneable(val)
-    return _shouldBeCloneable && !_isCloneable
-  }
+  // isProxy (val) {
+  //   function shouldBeCloneable (o) {
+  //     const type = typeof o
+  //     return (
+  //       o?.constructor === ({}).constructor ||
+  //       type === 'undefined' ||
+  //       o === null ||
+  //       type === 'boolean' ||
+  //       type === 'number' ||
+  //       type === 'string' ||
+  //       o instanceof Date ||
+  //       o instanceof RegExp ||
+  //       o instanceof Blob ||
+  //       o instanceof File ||
+  //       o instanceof FileList ||
+  //       o instanceof ArrayBuffer ||
+  //       o instanceof ImageData ||
+  //       o instanceof ImageBitmap ||
+  //       o instanceof Array ||
+  //       o instanceof Map ||
+  //       o instanceof Set
+  //     )
+  //   }
+  //   function isCloneable (val) {
+  //     try {
+  //       postMessage(val, '*')
+  //     } catch (error) {
+  //       // 错误码25表示不能被clone
+  //       if (error?.code === 25) return false
+  //     }
+  //     return true
+  //   }
+  //   const _shouldBeCloneable = shouldBeCloneable(val)
+  //   const _isCloneable = isCloneable(val)
+  //   return _shouldBeCloneable && !_isCloneable
+  // }
 }
 // 使用 varType["isNull"](null)等
 // export const varType = new VarType()
