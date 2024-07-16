@@ -1,10 +1,17 @@
 {
   "name": "@muyi086/cal",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "calculate a string expression",
-  "main": "index.min.js",
+  "main": "./lib/index.min.cjs",
+  "module": "./lib/index.min.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.min.cjs",
+      "import": "./lib/index.min.mjs"
+    }
   },
   "repository": {
     "type": "git",

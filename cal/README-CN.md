@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/cal
 # common JS
-const cal = require('@muyi086/cal')
+const { cal } = require('@muyi086/cal')
 # es6
-import cal from '@muyi086/cal'
+import { cal } from '@muyi086/cal'
 ```
 
 ## 使用

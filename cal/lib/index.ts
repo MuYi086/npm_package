@@ -5,13 +5,13 @@
  * @Blog: https://github.com/MuYi086/blog
  * @Date: 2021/04/11 08:50
  */
+type Operator = '+' | '-' | '*' | '/'
 class Cal {
-  constructor () {
-    this.suitArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
-    this.signArr = ['+', '-', '*', '/']
-  }
+  suitArr: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
+  signArr: Operator[] = ['+', '-', '*', '/']
+  constructor () {}
   // 处理多重括号:类比入栈和出栈操作：以一对()为最小执行单位
-  dealBracket (str) {
+  dealBracket (str: string): (string | number) {
     // 在执行操作前去除多余的符号
     str = this.dropSign(str)
     // 判断解括号次数,防止死循环
@@ -28,7 +28,7 @@ class Cal {
     return value
   }
   // 去除多余的符号:取最后一个
-  dealNeedlessSign (str, type) {
+  dealNeedlessSign (str: string, type: number): (string | number) {
     // 去除首尾括号
     if (type === 1) { str = str.slice(1, str.length - 1) }
     let arr = this.cutStr(str)
@@ -37,7 +37,7 @@ class Cal {
     return resultVal
   }
   // 简单运算:字符串加减乘除
-  simpleOperation (newArr) {
+  simpleOperation (newArr: (string | number)[]): (string | number) {
     while (newArr.length >= 3) {
       // 先判断乘号分支;
       let mulSign = newArr.indexOf('*') > 0
@@ -80,10 +80,10 @@ class Cal {
     return newArr[0]
   }
   // 符号运算
-  doOperation (arr, sign) {
+  doOperation (arr: any[], sign: Operator): any[] {
     while (arr.indexOf(sign) > 0 && arr.indexOf(sign) < (arr.length - 1)) {
       let idx = arr.indexOf(sign)
-      let concatVal = ''
+      let concatVal: number = -1
       if (sign === '*') { concatVal = Number(arr[idx - 1]) * Number(arr[idx + 1]) }
       if (sign === '/') { concatVal = Number(arr[idx - 1]) / Number(arr[idx + 1]) }
       if (sign === '+') { concatVal = Number(arr[idx - 1]) + Number(arr[idx + 1]) }
@@ -93,15 +93,15 @@ class Cal {
     return arr
   }
   // 将字符串分割成数字和符号的数组
-  cutStr (str) {
-    let newArr = []
+  cutStr (str: string): (string | number)[] {
+    let newArr: (string | number)[] = []
     let tempStr = ''
     for (let i = 0; i < str.length; i++) {
       if (i === str.length - 1) {
         tempStr += str.charAt(i)
         newArr.push(tempStr)
       } else {
-        if (this.signArr.indexOf(str.charAt(i)) >= 0) {
+        if (this.signArr.includes(str.charAt(i) as Operator)) {
           // 是符号且为减号
           if (str.charAt(i) === '-') {
             if (tempStr.indexOf('-') < 0) {
@@ -127,7 +127,7 @@ class Cal {
       }
     }
     // 最后将减号变负数留下的空隙补'+'
-    let idxArr = []
+    let idxArr: number[] = []
     for (let i = 0; i < newArr.length; i++) {
       if (!isNaN(Number(newArr[i - 1])) && !isNaN(Number(newArr[i]))) {
         idxArr.push(i)
@@ -137,14 +137,14 @@ class Cal {
     return newArr
   }
   // 丢弃多余的符号
-  dropSign (str) {
+  dropSign (str: string): string {
     let arr = str.split('')
     // 数组:符号对应下标
-    let idxArr = []
+    let idxArr: number[] = []
     // 数组:丢弃符号下标
-    let lostArr = []
+    let lostArr: number[] = []
     for (let idx in arr) {
-      if (this.signArr.indexOf(arr[idx]) >= 0) { idxArr.push(Number(idx)) }
+      if (this.signArr.includes(arr[idx] as Operator)) { idxArr.push(Number(idx)) }
     }
     if (idxArr.length > 1) {
       idxArr.reduce(function (x, y) {
@@ -156,5 +156,4 @@ class Cal {
     return arr.reduce(function (x, y) { return String(x) + y })
   }
 }
-const cal = new Cal()
-module.exports = cal
+export const cal = new Cal()
