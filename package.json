@@ -15,14 +15,15 @@
     "npm",
     "package"
   ],
-  "dependencies": {
-    "terser": "^5.30.3",
-    "chalk": "^4.1.2"
-  },
+  "dependencies": {},
   "author": "MuYi086",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },
-  "homepage": "https://github.com/MuYi086/npm_package#readme"
+  "homepage": "https://github.com/MuYi086/npm_package#readme",
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "esbuild": "^0.23.0"
+  }
 }
