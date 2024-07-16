@@ -6,28 +6,28 @@
  * @Date: 2021/04/11 08:50
  */
 class Calendar {
+  yearArr: number[] = []
+  monthArr: number[] = []
+  weekDay: string[] = []
+  gan: string[] = []
+  zhi: string[] = []
+  chineseZodiac: string[] = []
+  farmMonthArr: string[] = []
+  pingMonthArr: string[] = []
+  runMonthArr: string[] = []
+  farmDate: number[] = []
+  farmDateArr: any[] = []
+  today: any = {}
+  lastThreeMonthDay: any[] = []
+  currentMonthDay: any[] = []
+  currentMonthFarmDay: any[] = []
+  searchDay: { year: number; month: number; day: number } = {year: 1900, month: 1, day: 1}
+  prevMonthObj: any = {}
+  nextMonthObj: any = {}
   constructor () {
-    this.yearArr = []
-    this.monthArr = []
-    this.weekDay = []
-    this.gan = []
-    this.zhi = []
-    this.chineseZodiac = []
-    this.farmMonthArr = []
-    this.pingMonthArr = []
-    this.runMonthArr = []
-    this.farmDate = []
-    this.farmDateArr = []
-    this.today = {}
-    this.lastThreeMonthDay = []
-    this.currentMonthDay = []
-    this.currentMonthFarmDay = []
-    this.searchDay = {year: 1900, month: 1, day: 1}
-    this.prevMonthObj = {}
-    this.nextMonthObj = {}
     this.init()
   }
-  init () {
+  private init () {
     for (let i = 1900; i < 2051; i++) { this.yearArr.push(i) }
     for (let i = 0; i < 12; i++) { this.monthArr.push(i + 1) }
     this.weekDay = ('一二三四五六日').split('')
@@ -58,10 +58,10 @@ class Calendar {
       0x0a4d0, 0x1d0b6, 0x0d250, 0x0d520, 0x0dd45, 0x0b5a0, 0x056d0, 0x055b2, 0x049b0,
       0x0a577, 0x0a4b0, 0x0aa50, 0x1b255, 0x06d20, 0x0ada0]
     this.farmDateArr = this.parseFarmInfoByHexCode(this.farmDate)
-    let today = new Date()
-    let year = today.getFullYear()
-    let month = today.getMonth() + 1
-    let day = today.getDate()
+    const today = new Date()
+    const year = today.getFullYear()
+    const month = today.getMonth() + 1
+    const day = today.getDate()
     this.today = today
     this.searchDay = {year: year, month: month, day: day}
     // 计算公历
@@ -69,17 +69,16 @@ class Calendar {
     // 计算农历
     this.calFarmInfo(this.searchDay)
   }
-  reset () {
+  private reset () {
     this.lastThreeMonthDay = []
     this.currentMonthDay = []
   }
   // 根据传入的月份,查询最近三个月日历:其实只要上月和下月各取一点就可以了,这里取15天
-  searchLastThreeMonthDay (searchDay) {
+  private searchLastThreeMonthDay (searchDay: { year: number; month: number; day: number }) {
     // 时间格式统一使用/是为了兼容ios
-    let year = searchDay.year
-    let month = searchDay.month
-    let prevMonthStr = month === 1 ? `${year - 1}/12/15` : `${year}/${month - 1}/15`
-    let nextMonthStr = month === 12 ? `${year + 1}/1/15` : `${year}/${month + 1}/15`
+    const { year, month } = searchDay
+    const prevMonthStr = month === 1 ? `${year - 1}/12/15` : `${year}/${month - 1}/15`
+    const nextMonthStr = month === 12 ? `${year + 1}/1/15` : `${year}/${month + 1}/15`
     this.prevMonthObj = {
       year: month === 1 ? year - 1 : year,
       month: month === 1 ? 12 : month - 1,
@@ -100,17 +99,17 @@ class Calendar {
     this.searchCurrentMonthDay(searchDay)
   }
   // 时间戳转日期的方法
-  timeStampToDate (timeStamp) {
+  private timeStampToDate (timeStamp: number): any {
     let date = new Date(timeStamp)
     let dateStr = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
     let weekDay = date.getDay()
     return {date: dateStr, weekDay: weekDay}
   }
   // 计算出当前月份的所有日期
-  searchCurrentMonthDay (searchDay) {
-    let monthStart = `${searchDay.year}/${searchDay.month}/1`
-    let lastDay = new Date(searchDay.year, searchDay.month, 0).getDate()
-    let monthEnd = `${searchDay.year}/${searchDay.month}/${lastDay}`
+  private searchCurrentMonthDay (searchDay: { year: number; month: number; day: number }) {
+    const monthStart = `${searchDay.year}/${searchDay.month}/1`
+    const lastDay = new Date(searchDay.year, searchDay.month, 0).getDate()
+    const monthEnd = `${searchDay.year}/${searchDay.month}/${lastDay}`
     let monthStartIdx = 0
     let monthEndIdx = 28
     for (let i = 0; i < this.lastThreeMonthDay.length; i++) {
@@ -123,12 +122,12 @@ class Calendar {
       }
     }
     // 日历表实际开头星期一: 1-6直接减，０相当于减７
-    let cutLength = this.lastThreeMonthDay[monthStartIdx].weekDay == 0 ? 7 : this.lastThreeMonthDay[monthStartIdx].weekDay
-    let calStartMonIdx = monthStartIdx - cutLength
+    const cutLength = this.lastThreeMonthDay[monthStartIdx].weekDay == 0 ? 7 : this.lastThreeMonthDay[monthStartIdx].weekDay
+    const calStartMonIdx = monthStartIdx - cutLength
     // 日历表实际开头星期一
     // let calStartMonIdx = monthStartIdx - this.lastThreeMonthDay[monthStartIdx].weekDay
     // 日历表实际结尾星期日
-    let calEndSunIdx = monthEndIdx + (6 - this.lastThreeMonthDay[monthEndIdx].weekDay)
+    const calEndSunIdx = monthEndIdx + (6 - this.lastThreeMonthDay[monthEndIdx].weekDay)
     for (let i = 1; i <= calEndSunIdx - calStartMonIdx + 1; i++) {
       let dateObj = this.lastThreeMonthDay[calStartMonIdx + i]
       let shortDate = (dateObj.date).split('/').pop()
@@ -138,71 +137,69 @@ class Calendar {
     }
   }
   // 搜索对应日期的月份时间
-  search (dateStr) {
+  public search (dateStr: string) {
     // 处理'2019.12.12'或'2019-12-12'或'2019/12/12'格式的时间
-    let dateArr = dateStr.split('')
-    let dealArr = []
+    const dateArr = dateStr.split('')
+    const dealArr: string[] = []
     dateArr.forEach(item => {
       dealArr.push(isNaN(Number(item)) ? '|' : item)
     })
-    let newDateArr = this.arrTransToNum((dealArr.join('')).split('|'))
+    const newDateArr = this.arrTransToNum((dealArr.join('')).split('|'))
     this.reset()
-    this.searchDay = {year: newDateArr[0], month: newDateArr[1], day: newDateArr[2]}
+    this.searchDay = { year: newDateArr[0], month: newDateArr[1], day: newDateArr[2] }
     this.searchLastThreeMonthDay(this.searchDay)
     // 查询农历
     this.calFarmInfo(this.searchDay)
   }
   // 处理时间数组:全项处理成Number
-  arrTransToNum (arr) {
-    let newArr = []
+  private arrTransToNum (arr: (number | string)[]) {
+    const newArr: number[] = []
     arr.forEach(item => {
       newArr.push(Number(item))
     })
     return newArr
   }
   // 查询农历方法
-  calFarmInfo (searchDay) {
-    let year = searchDay.year
-    let month = searchDay.month
-    let day = searchDay.day
+  private calFarmInfo (searchDay: { year: number; month: number; day: number }) {
+    const { year, month, day } = searchDay
     // 计算与1900/01/31日的总天数,当天是'庚子年正月初一'
-    let oldTimeStamp = new Date('1900/01/31').getTime()
-    let currentTimeStamp = new Date(`${year}/${month}/${day}`).getTime()
-    let oneDayTimeStamp = 24 * 60 * 60 * 1000
-    let len = Math.floor((currentTimeStamp - oldTimeStamp) / oneDayTimeStamp)
+    const oldTimeStamp = new Date('1900/01/31').getTime()
+    const currentTimeStamp = new Date(`${year}/${month}/${day}`).getTime()
+    const oneDayTimeStamp = 24 * 60 * 60 * 1000
+    const len = Math.floor((currentTimeStamp - oldTimeStamp) / oneDayTimeStamp)
     // 计算出当前月份的农历信息
     this.currentMonthFarmDay = this.calCurrentMonthFarmInfo(this.currentMonthDay, this.farmDateArr, len)
   }
   // 将存储的十六进制月份信息解析成2进制
-  parsetMonthInfo (yearInfo) {
-    let len = yearInfo.length
-    let runMonth = parseInt(yearInfo.slice(len - 4, len), 2)
-    let monthInfo = (yearInfo.slice(0, len - 4)).split('')
+  private parsetMonthInfo (yearInfo: string): [number, string[], number] {
+    const len = yearInfo.length
+    const runMonth = parseInt(yearInfo.slice(len - 4, len), 2)
+    const monthInfo = (yearInfo.slice(0, len - 4)).split('')
     if (monthInfo.length === 11) {
       monthInfo.unshift('0', '0')
     }
     if (monthInfo.length === 12) {
       monthInfo.unshift('0')
     }
-    let runSmBig = Number(monthInfo.shift())
+    const runSmBig = Number(monthInfo.shift())
     return [runSmBig, monthInfo, runMonth]
   }
   // 通过十六进制解析农历信息
-  parseFarmInfoByHexCode (arr) {
-    let farmDateArr = []
+  private parseFarmInfoByHexCode (arr: number[]) {
+    let farmDateArr: any[] = []
     for (let i = 0; i < arr.length; i++) {
-      let yearInfo = (arr[i]).toString(2)
-      let parseInfo = this.parsetMonthInfo(yearInfo)
-      let runBigSm = parseInfo[0]
-      let monthInfo = parseInfo[1]
-      let runMonth = parseInfo[2]
+      const yearInfo = (arr[i]).toString(2)
+      const parseInfo = this.parsetMonthInfo(yearInfo)
+      const runBigSm = parseInfo[0]
+      const monthInfo = parseInfo[1]
+      const runMonth = parseInfo[2]
       for (let m = 0; m < monthInfo.length; m++) {
         let currentMonth = Number(monthInfo[m]) === 0 ? this.pingMonthArr : this.runMonthArr
         currentMonth.forEach(item => {
-          let year = this.yearArr[i]
-          let month = this.farmMonthArr[m]
-          let day = item
-          let farmItemObj = {year: year, month: month, day: day, isRunMonth: false}
+          const year = this.yearArr[i]
+          const month = this.farmMonthArr[m]
+          const day = item
+          const farmItemObj = { year: year, month: month, day: day, isRunMonth: false }
           farmDateArr.push(farmItemObj)
         })
         if (runMonth === this.monthArr[m]) {
@@ -220,10 +217,10 @@ class Calendar {
     return farmDateArr
   }
   // 计算出当前月份的农历信息
-  calCurrentMonthFarmInfo (normalArr, farmArr, len) {
+  private calCurrentMonthFarmInfo (normalArr: any[], farmArr: any[], len: number) {
     let lenBeafore = 0
     let lenAfter = 0
-    let currentMonthFarmDay = []
+    let currentMonthFarmDay: any[] = []
     for (let i = 0; i < normalArr.length; i++) {
       if (normalArr[i].isCurrentMonth) {
         lenBeafore = i
@@ -232,15 +229,12 @@ class Calendar {
       }
     }
     for (let m = (len - lenBeafore); m < (len + lenAfter); m++) {
-      let year = this.farmDateArr[m].year
-      let month = this.farmDateArr[m].month
-      let day = this.farmDateArr[m].day
-      let isCurrentMonth = m >= len && m <= (len + normalArr.length)
-      let farmItemObj = {year: year, month: month, day: day, isCurrentMonth: isCurrentMonth}
+      const { year, month, day } = this.farmDateArr[m]
+      const isCurrentMonth = m >= len && m <= (len + normalArr.length)
+      const farmItemObj: any = { year: year, month: month, day: day, isCurrentMonth: isCurrentMonth }
       currentMonthFarmDay.push(farmItemObj)
     }
     return currentMonthFarmDay
   }
 }
-const calendar = new Calendar()
-module.exports = calendar
+export const calendar = new Calendar()

@@ -1,10 +1,17 @@
 {
   "name": "@muyi086/calendar",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "calendar and Lunar calendar",
-  "main": "index.min.js",
+  "main": "./lib/index.min.cjs",
+  "module": "./lib/index.min.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.min.cjs",
+      "import": "./lib/index.min.mjs"
+    }
   },
   "repository": {
     "type": "git",

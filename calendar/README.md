@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/calendar
 # common JS
-const calendar = require('@muyi086/calendar')
+const { calendar } = require('@muyi086/calendar')
 # es6
-import calendar from '@muyi086/calendar'
+import { calendar } from '@muyi086/calendar'
 ```
 
 ## Use
