@@ -8,7 +8,7 @@
 ```SHELL
 npm install @muyi086/git-commit-info
 # common JS
-const gitCommitInfo = require('@muyi086/git-commit-info')
+const { gitCommitInfo } = require('@muyi086/git-commit-info')
 ```
 
 ## Use

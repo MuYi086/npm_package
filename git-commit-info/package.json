@@ -1,10 +1,16 @@
 {
   "name": "@muyi086/git-commit-info",
-  "version": "1.0.14",
+  "version": "1.0.17",
   "description": "get commit info",
-  "main": "index.min.js",
+  "main": "./lib/index.min.cjs",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.min.cjs"
+    }
   },
   "repository": {
     "type": "git",
@@ -29,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/MuYi086/npm_package/issues"
   },
-  "homepage": "https://github.com/MuYi086/npm_package#readme"
+  "homepage": "https://github.com/MuYi086/npm_package#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.10"
+  }
 }
