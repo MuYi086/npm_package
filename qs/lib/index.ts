@@ -13,7 +13,7 @@
  * @param {string} sep2 &
  * @returns string
  */
-const stringify = (obj, sep1 = '=', sep2 = '&') => {
+const stringify = (obj: any, sep1: string = '=', sep2: string = '&'): string => {
   return Object.keys(obj).map(key => key + sep1 + obj[key]).join(sep2)
 }
 
@@ -25,8 +25,9 @@ const stringify = (obj, sep1 = '=', sep2 = '&') => {
  * @param {string} sep2 =
  * @returns object
  */
-const parse = (str, pre = '?', sep1 = '&', sep2 = '=') => {
+const parse = (str: string, pre: string = '?', sep1: string = '&', sep2: string = '='):any => {
   const result = {}
+  str = str.includes(pre) ? str : `?${str}`
   if (str.includes(pre)) {
     // 处理字符串?和=
     const s = str.split(pre)[1].split(sep1)
@@ -43,7 +44,8 @@ const parse = (str, pre = '?', sep1 = '&', sep2 = '=') => {
   }
   return result
 }
-module.exports = {
-  stringify,
-  parse
+
+export const qs = {
+  parse,
+  stringify
 }

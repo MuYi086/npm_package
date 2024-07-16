@@ -1,0 +1,1 @@
+var g=(s,n="=",t="&")=>Object.keys(s).map(i=>i+n+s[i]).join(t),o=(s,n="?",t="&",i="=")=>{let c={};return s=s.includes(n)?s:`?${s}`,s.includes(n)&&s.split(n)[1].split(t).forEach(r=>{let[l,e]=r.split(i);e.includes(",")?c[l]=e.split(","):c[l]=e}),c},a={parse:o,stringify:g};export{a as qs};

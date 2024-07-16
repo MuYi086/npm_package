@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/qs
 # common JS
-const qs = require('@muyi086/qs')
+const { qs } = require('@muyi086/qs')
 # es6
-import qs from '@muyi086/qs'
+import { qs } from '@muyi086/qs'
 ```
 
 ## Use
