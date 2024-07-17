@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/validator
 # common JS
-const validator = require('@muyi086/validator')
+const { validator } = require('@muyi086/validator')
 # es6
-import validator from '@muyi086/validator'
+import { validator } from '@muyi086/validator'
 ```
 
 ## Use
