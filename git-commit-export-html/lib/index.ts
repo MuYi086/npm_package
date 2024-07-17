@@ -5,16 +5,23 @@
  * @Blog: https://github.com/MuYi086/blog
  * @Date: 2023/12/11 18:32
  */
-const { gitlogPromise } = require('gitlog')
-const gitCommitInfo = require('@muyi086/git-commit-info')
-const { resolve } = require('path')
-const fs = require('fs')
+import { gitlogPromise } from 'gitlog'
+import { gitCommitInfo } from '@muyi086/git-commit-info'
+import { resolve } from 'path'
+import fs from 'fs'
+
+interface Options {  
+  since: string;  
+  until: string;  
+  number: number;  
+  fields: string[];  
+}  
 /**
  * 构造最新的options
  * @param {*} options
- * @returns object
+ * @returns GitLogOptions
  */
-const constructOptions = (options) => {
+const constructOptions = (options: Options): any => {
   const newOptions = {
     repo: resolve('.git'),
     execOptions: { maxBuffer: 1000 * 1024 },
@@ -24,16 +31,16 @@ const constructOptions = (options) => {
 }
 /**
  * 找出当前用户的commit记录,生成对应的html和json
- * @param {*} commits 
- * @param {*} options 
+ * @param {*} commits 提交记录
+ * @param {*} options 用户配置
  */
-const findCurrentUseCommit = (commits, options) => {
+const findCurrentUseCommit = (commits: object[], options: Options) => {
   const { gitUserName } = gitCommitInfo()
-  const userCommitArr = commits.filter(c => c.authorName === gitUserName)
-    .filter(d => !d.subject.includes('Merge'))
-  const dealArr = userCommitArr.map(ucA => {
-    const newObj = {}
-    options.fields.forEach(li => {
+  const userCommitArr = commits.filter((c: any) => c.authorName === gitUserName)
+    .filter((d: any) => !d.subject.includes('Merge'))
+  const dealArr = userCommitArr.map((ucA: any) => {
+    const newObj: any = {}
+    options.fields.forEach((li: string) => {
       newObj[li] = ucA[li]
     })
     return newObj
@@ -49,12 +56,11 @@ const findCurrentUseCommit = (commits, options) => {
 }
 /**
  * 生成log相关的html和json记录
- * @param {*} options 
+ * @param {*} options 用户配置
  */
-function gitCommitExportHtml (options) {
+export const gitCommitExportHtml = (options: Options) => {
   const newOptions = constructOptions(options)
   gitlogPromise(newOptions)
-    .then((commits) => findCurrentUseCommit(commits, options))
-    .catch((err) => console.log(err))
+    .then((commits: any) => findCurrentUseCommit(commits, options))
+    .catch((err: Error) => console.log(err))
 }
-module.exports = gitCommitExportHtml

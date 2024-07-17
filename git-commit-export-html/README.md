@@ -8,7 +8,7 @@
 ```SHELL
 npm install @muyi086/git-commit-export-html
 # common JS
-const gitCommitExportHtml = require('@muyi086/git-commit-export-html')
+const { gitCommitExportHtml } = require('@muyi086/git-commit-export-html')
 ```
 
 ## Use

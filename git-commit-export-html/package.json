@@ -1,10 +1,17 @@
 {
   "name": "@muyi086/git-commit-export-html",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Find the commit records of a user for a specific time period, and generate corresponding HTML and JSON files",
-  "main": "index.min.js",
+  "main": "./lib/index.min.cjs",
+  "module": "./lib/index.min.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.min.cjs",
+      "import": "./lib/index.min.mjs"
+    }
   },
   "repository": {
     "type": "git",
@@ -19,9 +26,11 @@
     "fs",
     "path"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "gitlog": "^4.0.8",
-    "@muyi086/git-commit-info": "^1.0.2"
+    "@muyi086/git-commit-info": "^1.0.17",
+    "@types/node": "^20.14.10"
   },
   "author": "MuYi086",
   "license": "MIT",
