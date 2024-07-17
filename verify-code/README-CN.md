@@ -8,17 +8,19 @@
 ```SHELL
 npm install @muyi086/verify-code
 # common JS
-const verifyCode = require('@muyi086/verify-code')
+const { verifyCode } = require('@muyi086/verify-code')
 # es6
-import verifyCode from '@muyi086/verify-code'
+import { verifyCode } from '@muyi086/verify-code'
 ```
 
 ## 使用
 ```JS
 // 页面创建一个元素
 <canvas id="canvas"></canvas>
-// 导入和使用
-verifyCode.random(3, 5)
+// 生成验证码
+const codeArr = verifyCode.random(3, 5)
+// 绘制到页面上
+verifyCode.drawImg(codeArr, '#canvas')
 // 完整方法
 /**
  * @param {number} type 1: 纯数字;2: 纯字母;3: 数字和字母 

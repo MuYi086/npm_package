@@ -8,18 +8,19 @@
 ```SHELL
 npm install @muyi086/verify-code
 # common JS
-const verifyCode = require('@muyi086/verify-code')
+const { verifyCode } = require('@muyi086/verify-code')
 # es6
-import verifyCode from '@muyi086/verify-code'
+import { verifyCode } from '@muyi086/verify-code'
 ```
 
 ## Use
 ```JS
 // dom create
 <canvas id="canvas"></canvas>
-// import and use
-verifyCode.random(3, 5)
-// full code
+// render verify code
+const codeArr = verifyCode.random(3, 5)
+// draw on the page
+verifyCode.drawImg(codeArr, '#canvas')
 /**
  * @param {number} type 1: number;2: letter;3: number + letter 
  * @param {number} len verify code length
