@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/img-to-base64
 # common JS
-const imgToBase64 = require('@muyi086/img-to-base64')
+const { imgToBase64 } = require('@muyi086/img-to-base64')
 # es6
-import imgToBase64 from '@muyi086/img-to-base64'
+import { imgToBase64 } from '@muyi086/img-to-base64'
 ```
 
 ## Use
@@ -20,10 +20,10 @@ Currently only supports pc, mobile framework uniapp and others will hijack canva
 // Data loaded without CORS approval will cause the canvas to be polluted, and the canvas.toDataURL will report an error
 // parse img url
 const url = 'http://img.qipeiren.com/UploadFile/UserProPic/2019/11/23/4b65b8aadcfb0ac65a91.jpg'
-console.log(imgToBase64.parse(url))
+console.log(await imgToBase64.parse(url))
 // parse img object
 const img = document.getElementById('test')
-console.log(imgToBase64.parse(img))
+console.log(await imgToBase64.parse(img))
 // useCanvas img object
 const img = document.getElementById('test')
 console.log(imgToBase64.useCanvas(img))

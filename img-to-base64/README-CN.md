@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/img-to-base64
 # common JS
-const imgToBase64 = require('@muyi086/img-to-base64')
+const { imgToBase64 } = require('@muyi086/img-to-base64')
 # es6
-import imgToBase64 from '@muyi086/img-to-base64'
+import { imgToBase64 } from '@muyi086/img-to-base64'
 ```
 
 ## 使用
@@ -20,10 +20,10 @@ import imgToBase64 from '@muyi086/img-to-base64'
 // 未经cors批准加载的数据会导致画布被污染, canvas.toDataURL会报错
 // parse 图片 url
 const url = 'http://img.qipeiren.com/UploadFile/UserProPic/2019/11/23/4b65b8aadcfb0ac65a91.jpg'
-console.log(imgToBase64.parse(url))
+console.log(await imgToBase64.parse(url))
 // parse 图片 object
 const img = document.getElementById('test')
-console.log(imgToBase64.parse(img))
+console.log(await imgToBase64.parse(img))
 // useCanvas 图片 object
 const img = document.getElementById('test')
 console.log(imgToBase64.useCanvas(img))

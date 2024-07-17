@@ -1,11 +1,18 @@
 {
 
   "name": "@muyi086/img-to-base64",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "trans img to base64",
-  "main": "index.min.js",
+  "main": "./lib/index.min.cjs",
+  "module": "./lib/index.min.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.min.cjs",
+      "import": "./lib/index.min.mjs"
+    }
   },
   "repository": {
     "type": "git",
@@ -15,6 +22,9 @@
     "img",
     "base64"
   ],
+  "devDependencies": {
+    "@types/node": "^20.14.10"
+  },
   "author": "MuYi086",
   "license": "MIT",
   "bugs": {
