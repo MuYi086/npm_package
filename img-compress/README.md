@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/img-compress
 # common JS
-const imgCompress = require('@muyi086/img-compress')
+const { imgCompress } = require('@muyi086/img-compress')
 # es6
-import imgCompress from '@muyi086/img-compress'
+import { imgCompress } from '@muyi086/img-compress'
 ```
 
 ## Use
