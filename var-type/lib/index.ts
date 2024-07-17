@@ -6,17 +6,24 @@
  * @Date: 2021/04/11 12:30
  */
 class VarType {
-  constructor () {
+  private typeList: string[]
+  private static _instance: VarType | null = null
+  constructor() {  
     this.typeList = ['Null', 'Undefined', 'Object', 'Array', 'ArrayBuffer', 'String', 'Number', 'Boolean', 'Function', 'RegExp', 'Date', 'FormData', 'File', 'Blob', 'URLSearchParams', 'Set', 'WeakSet', 'Map', 'WeakMap']
     this.init()
   }
-
+  static get instance(): VarType {  
+    if (!VarType._instance) {
+      VarType._instance = new VarType()
+    }
+    return VarType._instance
+  }
   /**
    * 判断变量类型
    * @param {string} value
    * @returns lowercase string
    */
-  type (value) {
+  private type (value: any): string {
     const s = Object.prototype.toString.call(value)
     return s.match(/\[object (.*?)\]/)[1].toLowerCase()
   }
@@ -24,21 +31,25 @@ class VarType {
   /**
    * 增加判断类型数据方法
    */
-  init () {
-    this.typeList.forEach((t) => {
-      this['is' + t] = (o) => {
-        return this.type(o) === t.toLowerCase()
-      }
+  private init(): void {
+    const self = this
+    this.typeList.forEach((t: string) => {
+      Object.defineProperty(VarType.prototype, `is${t}`, {
+        value: function (o: any) {
+          return self.type(o) === t.toLowerCase()
+        },
+        writable: true,
+        configurable: true
+      })
     })
   }
-
   /**
    * isBuffer
    * @param {any} val
    * @returns boolean
    */
-  isBuffer (val) {
-    return val !== null && !this.isUndefined(val) && val.constructor !== null && !this.isUndefined(val.constructor) && this.isFunction(val.constructor.isBuffer) && val.constructor.isBuffer(val)
+  static isBuffer(val: any): boolean {  
+    return val !== null && (VarType as any).isUndefined(val) && val.constructor !== null && (VarType as any).isUndefined(val.constructor) && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val)
   }
 
   /**
@@ -46,8 +57,8 @@ class VarType {
    * @param {any} val
    * @returns boolean
    */
-  isStream (val) {
-    return this.isObject(val) && this.isFunction(val.pipe)
+  static isStream(val: any): boolean {  
+    return (VarType as any).isObject(val) && (VarType as any).isFunction(val.pipe)
   }
 
   /**
@@ -93,5 +104,4 @@ class VarType {
   // }
 }
 // 使用 varType["isNull"](null)等
-// export const varType = new VarType()
-module.exports = new VarType()
+export const varType = VarType.instance
