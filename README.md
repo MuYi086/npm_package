@@ -88,3 +88,9 @@ render interface name and copy url
 ```
 https://www.npmjs.com/package/@muyi086/chrome-extension-interface-url-copy
 ```
+
+## semantic-release-hack
+The official `semantic-release` wild hack
+```
+https://www.npmjs.com/package/@muyi086/semantic-release-hack
+```

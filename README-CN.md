@@ -86,3 +86,9 @@ https://www.npmjs.com/package/chrome-extension-music163-fetch
 ```
 https://www.npmjs.com/package/@muyi086/chrome-extension-interface-url-copy
 ```
+
+## semantic-release-hack
+官方 `semantic-release` 的野生 `hack`
+```
+https://www.npmjs.com/package/@muyi086/semantic-release-hack
+```
