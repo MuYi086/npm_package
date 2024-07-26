@@ -1,9 +1,9 @@
-# semantic-release-hack
+# semantic-release-optimize
 
-[中文](https://github.com/MuYi086/npm_package/blob/master/semantic-release-hack/README-CN.md '中文')
+[English](./README.md 'English')
 
 ## 介绍
-Alibaba Cloud does not support pushing `git push refs/notes/xx`, which causes `npx semantic-release` to fail. Therefore, this hack was implemented: after forking the `v24.0.0` code, the `pushNotes` function was modified to allow `semantic-release` to execute normally.
+阿里云效不支持推送 `git push refs/notes/xx`, 会导致 `npx semantic-release` 失败，因此有了这个 `hack`，`fork` `v24.0.0` 代码后修改了 `pushNotes` 函数, 使 `semantic-release` 能够正常往下执行
 
 <h1 align="center" style="border-bottom: none;">📦🚀 semantic-release</h1>
 <h3 align="center">Fully automated version management and package publishing</h3>

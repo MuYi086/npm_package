@@ -1,5 +1,5 @@
 {
-  "name": "@muyi086/semantic-release-hack",
+  "name": "@muyi086/semantic-release-optimize",
   "description": "do some hack for official semantic-release",
   "version": "0.0.1",
   "type": "module",
@@ -131,10 +131,6 @@
   "prettier": {
     "printWidth": 120,
     "trailingComma": "es5"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
   },
   "repository": {
     "type": "git",
