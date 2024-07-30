@@ -49,7 +49,7 @@ const compileScript = async () => {
   const validatorInputFilePath = 'validator/lib/index.ts'
   const validatorOutputCjsPath = 'validator/lib/index.min.cjs'
   const validatorOutputMjsPath = 'validator/lib/index.min.mjs'
-  const varTypeInputFilePath = 'var-type/lib/index.ts'
+  const varTypeInputFilePath = 'var-type/lib/index.js'
   const varTypeOutputCjsPath = 'var-type/lib/index.min.cjs'
   const varTypeOutputMjsPath = 'var-type/lib/index.min.mjs'
   const verifyCodeInputFilePath = 'verify-code/lib/index.ts'

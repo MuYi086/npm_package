@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/var-type",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "JS variable type checking",
   "main": "./lib/index.min.cjs",
   "module": "./lib/index.min.mjs",
