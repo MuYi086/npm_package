@@ -1,6 +1,6 @@
 {
   "name": "@muyi086/validator",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "do some useful validate",
   "main": "./lib/index.min.cjs",
   "module": "./lib/index.min.mjs",

@@ -8,9 +8,9 @@
 ```SHELL
 npm install @muyi086/var-type
 # common JS
-const { varType } = require('@muyi086/var-type')
+const varType = require('@muyi086/var-type')
 # es6
-import { varType } from '@muyi086/var-type'
+import varType from '@muyi086/var-type'
 ```
 
 ## 使用
