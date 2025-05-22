@@ -11,21 +11,52 @@ window.onload = function () {
     }, 1000)
     // 开始程序
     function start () {
-        if ($('ul.apipost-doc-wrap-base-para').length) {
+        const isNewWeb = location.host.includes('apipost.net')
+        const apiUl = isNewWeb ? '.preview-url-link' : 'ul.apipost-doc-wrap-base-para'
+        const targetDom = isNewWeb ? '.ant-tree-node-content-wrapper' : '.ant-tree-node-content-wrapper'
+        const menuDom = isNewWeb? '.ant-tree-node-content-wrapper' : '.ant-tree-node-content-wrapper'
+        // 先解绑之前的点击事件，避免重复绑定
+        $(targetDom).off('click')
+        
+        // 旧版apipost网页执行逻辑
+        if ($(apiUl).length) {
             renderExtensionDiv()
-            main()
+            main(isNewWeb)
             clearInterval(timer)
-            $('.ant-tree-node-content-wrapper').click(() => {
-                setTimeout(() => {
-                    apiNameReset()
-                    main()
-                }, 500)
-            })
+        }
+        // 切换菜单新获取的接口名称需要重新绑定点击事件
+        $(menuDom).on('click', function() {
+            setTimeout(() => {
+                // 先解绑之前的点击事件，避免重复绑定
+                $(targetDom).off('click')
+                // 重新绑定点击事件
+                $(targetDom).on('click', function() {
+                    reRender()
+                })
+            }, 1000)
+        })
+        
+        // 重新绑定点击事件
+        $(targetDom).on('click', function() {
+            reRender()
+        })
+        // 切换菜单后重新渲染
+        function reRender () {
+            setTimeout(() => {
+                apiNameReset()
+                main(isNewWeb)
+            }, 500)
         }
     }
     // 主函数
-    function main () {
-        const initialUrl = $('ul.apipost-doc-wrap-base-para').eq(0).children('li').eq(1).find('span.apipost-cursor').text()
+    function main (isNewWeb) {
+        let initialUrl = ''
+        if (isNewWeb) {
+            initialUrl = $('.preview-url-link').text()
+        } else {
+            initialUrl = $('ul.apipost-doc-wrap-base-para').eq(0).children('li').eq(1).find('span.apipost-cursor').text()
+        }
+        console.log(initialUrl, '----initialUrl')
         // 替换协议头
         const dropProtocol = initialUrl.replace(/htt(p|ps):\/\//i, '')
         // 丢弃？后参数
