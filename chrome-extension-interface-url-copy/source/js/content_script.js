@@ -6,47 +6,34 @@
  * @Date: 2023/11/16 12:13
  */
 window.onload = function () {
-    const timer = setInterval(() => {
-        start()
+    // 构造插件dom
+    renderExtensionDiv()
+    // 监听 location 变化
+    let lastUrl = window.location.href
+    
+    // 监听 location 变化
+    const locationObserver = setInterval(function() {
+        const currentUrl = window.location.href
+        if (currentUrl !== lastUrl) {
+            console.log('location 发生变化:', currentUrl)
+            lastUrl = currentUrl
+            // 重新执行 start 函数
+            start()
+        }
     }, 1000)
     // 开始程序
     function start () {
         const isNewWeb = location.host.includes('apipost.net')
         const apiUl = isNewWeb ? '.preview-url-link' : 'ul.apipost-doc-wrap-base-para'
-        const targetDom = isNewWeb ? '.ant-tree-node-content-wrapper' : '.ant-tree-node-content-wrapper'
-        const menuDom = isNewWeb? '.ant-tree-node-content-wrapper' : '.ant-tree-node-content-wrapper'
-        // 先解绑之前的点击事件，避免重复绑定
-        $(targetDom).off('click')
-        
-        // 旧版apipost网页执行逻辑
-        if ($(apiUl).length) {
-            renderExtensionDiv()
-            main(isNewWeb)
-            clearInterval(timer)
-        }
-        // 切换菜单新获取的接口名称需要重新绑定点击事件
-        $(menuDom).on('click', function() {
-            setTimeout(() => {
-                // 先解绑之前的点击事件，避免重复绑定
-                $(targetDom).off('click')
-                // 重新绑定点击事件
-                $(targetDom).on('click', function() {
-                    reRender()
-                })
-            }, 1000)
-        })
-        
-        // 重新绑定点击事件
-        $(targetDom).on('click', function() {
-            reRender()
-        })
-        // 切换菜单后重新渲染
-        function reRender () {
-            setTimeout(() => {
+        // const targetDom = isNewWeb ? '.ant-tree-node-content-wrapper' : '.ant-tree-node-content-wrapper'
+        // 兼容旧版apipost网页执行逻辑
+        // 延时500ms，防止接口未返回res，网页还未加载对应url
+        setTimeout(() => {
+            if ($(apiUl).length) {
                 apiNameReset()
                 main(isNewWeb)
-            }, 500)
-        }
+            }
+        }, 500)
     }
     // 主函数
     function main (isNewWeb) {
@@ -56,7 +43,6 @@ window.onload = function () {
         } else {
             initialUrl = $('ul.apipost-doc-wrap-base-para').eq(0).children('li').eq(1).find('span.apipost-cursor').text()
         }
-        console.log(initialUrl, '----initialUrl')
         // 替换协议头
         const dropProtocol = initialUrl.replace(/htt(p|ps):\/\//i, '')
         // 丢弃？后参数
