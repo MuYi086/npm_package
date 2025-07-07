@@ -22,7 +22,8 @@
     "css": ["css/bootstrap.min.css", "css/custom.css"],
     "matches":[
       "https://console-docs.apipost.cn/*",
-      "https://doc.apipost.net/docs/detail/*"
+      "https://doc.apipost.net/docs/detail/*",
+      "https://docs.apipost.net/docs/detail/*"
     ],
     "js":["js/jquery.js","js/content_script.js", "js/bootstrap.min.js"]
   }]
