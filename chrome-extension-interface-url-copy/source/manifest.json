@@ -1,5 +1,5 @@
 {
-  "manifest_version":2,
+  "manifest_version":3,
   "name":"api接口取名",
   "description":"render interface name, opy name and url",
   "version":"1.0.1",
