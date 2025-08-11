@@ -88,7 +88,7 @@ https://www.npmjs.com/package/@muyi086/chrome-extension-interface-url-copy
 ```
 
 ## semantic-release-optimize
-官方 `semantic-release` 的野生 `hack`
+官方 `semantic-release` 的野生 `hack`，适配云效
 ```
 https://www.npmjs.com/package/@muyi086/semantic-release-optimize
 ```
