@@ -24,7 +24,9 @@ const {
   commitSubject,
   commitHash,
   latestTag
-} = gitCommitInfo()
+} = gitCommitInfo(env = '')
 // projectName, branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubject, commitHash, latestTag
 console.log(projectName, branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubject, commitHash, latestTag)
+// env = 'prod', return all commit subject between two tag
+console.log(projectName, branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubjects, commitHash, latestTag)
 ```

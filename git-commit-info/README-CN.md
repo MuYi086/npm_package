@@ -24,7 +24,9 @@ const {
   commitSubject,
   commitHash,
   latestTag
-} = gitCommitInfo()
+} = gitCommitInfo(env = '')
 // 远程仓库名、分支、当前用户名、当前用户邮箱、提交用户名、提交用户邮箱、提交日期、提交主题、提交哈希、最近标签
 console.log(projectName, branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubject, commitHash, latestTag)
+// env 环境参数，当为'prod'时获取两个tag之间的所有commit subject。 
+console.log(projectName, branch, gitUserName, gitUserEmail, commitName, commitEmail, commitDate, commitSubjects, commitHash, latestTag)
 ```

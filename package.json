@@ -15,7 +15,6 @@
     "npm",
     "package"
   ],
-  "dependencies": {},
   "author": "MuYi086",
   "license": "MIT",
   "bugs": {
@@ -23,7 +22,10 @@
   },
   "homepage": "https://github.com/MuYi086/npm_package#readme",
   "devDependencies": {
+    "@types/node": "^24.10.0",
     "chalk": "^4.1.2",
-    "esbuild": "^0.23.0"
+    "esbuild": "^0.23.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
