@@ -46,13 +46,57 @@ const getGitUserEmail = (): string => {
 }
 
 /**
- * 获取Git标签，并返回标签引用数组。
+ * 比较两个版本号（支持语义化版本号）
+ * @param {string} a 版本号A
+ * @param {string} b 版本号B
+ * @returns {number} 比较结果：负数表示a < b，0表示相等，正数表示a > b
+ */
+const compareVersions = (a: string, b: string): number => {
+  // 移除 refs/tags/ 前缀
+  const versionA = a.replace('refs/tags/', '')
+  const versionB = b.replace('refs/tags/', '')
+  
+  // 提取版本号部分（移除v前缀）
+  const cleanA = versionA.replace(/^v/, '')
+  const cleanB = versionB.replace(/^v/, '')
+  
+  // 分割版本号
+  const partsA = cleanA.split('.').map(part => {
+    // 处理预发布版本（如 1.0.0-beta.1）
+    const numPart = part.match(/^\d+/)?.[0] || '0'
+    return parseInt(numPart, 10) || 0
+  })
+  const partsB = cleanB.split('.').map(part => {
+    const numPart = part.match(/^\d+/)?.[0] || '0'
+    return parseInt(numPart, 10) || 0
+  })
+  
+  // 确保两个数组长度一致
+  const maxLength = Math.max(partsA.length, partsB.length)
+  while (partsA.length < maxLength) partsA.push(0)
+  while (partsB.length < maxLength) partsB.push(0)
+  
+  // 逐位比较
+  for (let i = 0; i < maxLength; i++) {
+    if (partsA[i] !== partsB[i]) {
+      return partsA[i] - partsB[i]
+    }
+  }
+  
+  return 0
+}
+
+/**
+ * 获取Git标签，并返回按版本号排序的标签引用数组。
  * @returns {string[]} Git标签引用数组。  
  */
 const getGitTags = (): string[] => {
   try {
     const tagsOutput = execGitCommand('git show-ref --tags')
-    return tagsOutput.match(/refs\/tags\/.+/ig) || []
+    const tags = tagsOutput.match(/refs\/tags\/.+/ig) || []
+    
+    // 按版本号排序（最新的排在最后）
+    return tags.sort(compareVersions)
   } catch (e) {
     return []
   }
