@@ -9,6 +9,8 @@
 npm install @muyi086/git-commit-info
 # common JS
 const { gitCommitInfo } = require('@muyi086/git-commit-info')
+# esm
+import { gitCommitInfo } from "@muyi086/git-commit-info"
 ```
 
 ## Use

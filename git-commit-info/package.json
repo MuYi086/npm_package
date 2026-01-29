@@ -1,14 +1,17 @@
 {
   "name": "@muyi086/git-commit-info",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "get commit info",
-  "main": "./lib/index.min.cjs",
   "type": "module",
+  "main": "./lib/index.min.cjs",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "exports": {
     ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.min.cjs",
       "require": "./lib/index.min.cjs"
     }
   },
